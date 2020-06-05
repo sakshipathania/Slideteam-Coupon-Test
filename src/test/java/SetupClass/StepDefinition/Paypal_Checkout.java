@@ -21,8 +21,8 @@ public class Paypal_Checkout extends SetupClass {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	
-	@Given("^user is already on Website Home Page ii$")
-	public void user_is_already_on_Website_Home_Page_ii() throws Throwable {
+	@Given("^user is already on Website Home Page$")
+	public void user_is_already_on_Website_Home_Page() throws Throwable {
 		//driver.get(AppURL);
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
@@ -30,8 +30,8 @@ public class Paypal_Checkout extends SetupClass {
 	    
 	}
 
-	@Then("^user navigates to sign up page ii$")
-	public void user_navigates_to_sign_up_page_ii() throws Throwable {
+	@Then("^user navigates to sign up page$")
+	public void user_navigates_to_sign_up_page() throws Throwable {
 		
 		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
 		 Thread.sleep(3000);
@@ -40,8 +40,8 @@ public class Paypal_Checkout extends SetupClass {
 	   
 	}
 
-	@Then("^user enter name ii$")
-	public void user_enter_name_ii() throws Throwable {
+	@Then("^user enter name$")
+	public void user_enter_name() throws Throwable {
 		
 		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_name1")));
 		 Thread.sleep(3000);
@@ -50,8 +50,8 @@ public class Paypal_Checkout extends SetupClass {
 	   
 	}
 
-	@Then("^user enter email ii$")
-	public void user_enter_email_ii() throws Throwable {
+	@Then("^user enter email$")
+	public void user_enter_email() throws Throwable {
 	   
 		// Generate Random Email Address
 		int leftLimit = 97; // letter 'a'
@@ -81,8 +81,8 @@ public class Paypal_Checkout extends SetupClass {
 		
 	}
 
-	@Then("^user enter password and confirm password ii$")
-	public void user_enter_password_and_confirm_password_ii() throws Throwable {
+	@Then("^user enter password and confirm password$")
+	public void user_enter_password_and_confirm_password() throws Throwable {
 		
 		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_password1")));
 		 Thread.sleep(3000);
@@ -96,8 +96,8 @@ public class Paypal_Checkout extends SetupClass {
 	    
 	}
 
-	@Then("^user enter captcha ii$")
-	public void user_enter_captcha_ii() throws Throwable {
+	@Then("^user enter captcha$")
+	public void user_enter_captcha() throws Throwable {
 		
 		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.id("captchtext")));
 		 Thread.sleep(3000);
@@ -106,8 +106,8 @@ public class Paypal_Checkout extends SetupClass {
 	    
 	}
 
-	@Then("^user click on register button to complete sign up ii$")
-	public void user_click_on_register_button_to_complete_sign_up_ii() throws Throwable {
+	@Then("^user click on register buton to complete sign up$")
+	public void user_click_on_register_buton_to_complete_sign_up() throws Throwable {
 		
 		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 		 Thread.sleep(3000);
@@ -131,8 +131,8 @@ public class Paypal_Checkout extends SetupClass {
 		}
 	    
 	} 
-    @Then("^user is redirected to pricing page and choose a plan to pay$")
-	public void user_is_redirected_to_pricing_page_and_choose_a_plan_to_pay(int arg1) throws Throwable {
+    @Then("^user is redirected to pricing page and choose the plan to pay$")
+	public void user_is_redirected_to_pricing_page_and_choose_the_plan_to_pay(int arg1) throws Throwable {
 		// choose a plan
 		js.executeScript("window.scrollBy(0,1000)");
 		 WebElement Subscribe_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='Monthly']")));
@@ -143,8 +143,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to checkout page$")
-	public void user_is_redirected_to_checkout_page(int arg1) throws Throwable {
+	@Then("^user is redirected checkout page$")
+	public void user_is_redirected_checkout_page(int arg1) throws Throwable {
 		Thread.sleep(6000);
     WebElement Continue =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pg-checkout-shipping-info']/div[1]/div/div/div/div[2]/button")));
 	js.executeScript("arguments[0].scrollIntoView();",Continue);
@@ -228,7 +228,7 @@ public class Paypal_Checkout extends SetupClass {
 	}
 
 
-	@Then("^user deleted the account$")
+	@Then("^user deletes account$")
 	public void user_deleted_the_account(int arg1) throws Throwable {
 		Thread.sleep(3000);
 	    driver.get("https://www.slideteam.net/");
