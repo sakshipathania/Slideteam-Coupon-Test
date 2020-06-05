@@ -2,7 +2,7 @@
 Feature:  Paypal Checkout
 Scenario: Test paypal checkout
 
-Given user is already on Website Home Page
+Given user is already on Website Home
 Then user user navigates to sign up page
 Then user enter name
 Then user enter email
