@@ -185,6 +185,7 @@ public class CO_Checkout extends SetupClass {
 		
 		
 	}*/
+	}
 
 	@Then("^paypal popup appears and user navigates back to my account (\\d+)CO$")
 	public void paypal_popup_appears_and_user_navigates_back_to_my_account_CO(int arg1) throws Throwable {
