@@ -1,4 +1,4 @@
-@2Checkout
+@2CO_Checkout
 Feature:  2CO Checkout
 Scenario: Test 2CO checkout
 
