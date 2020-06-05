@@ -25,8 +25,8 @@ public class CO_Checkout extends SetupClass {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	
-	@Given("^user is already on Website Home Page ii$")
-	public void user_is_already_on_Website_Home_Page_ii() throws Throwable {
+	@Given("^user is already on Website Home Page CO$")
+	public void user_is_already_on_Website_Home_Page_CO() throws Throwable {
 		//driver.get(AppURL);
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
@@ -34,8 +34,8 @@ public class CO_Checkout extends SetupClass {
 	    
 	}
 
-	@Then("^user navigates to sign up page ii$")
-	public void user_navigates_to_sign_up_page_ii() throws Throwable {
+	@Then("^user navigates to sign up page CO$")
+	public void user_navigates_to_sign_up_page_CO() throws Throwable {
 		
 		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
 		 Thread.sleep(3000);
@@ -44,8 +44,8 @@ public class CO_Checkout extends SetupClass {
 	   
 	}
 
-	@Then("^user enter name ii$")
-	public void user_enter_name_ii() throws Throwable {
+	@Then("^user enter name CO$")
+	public void user_enter_name_CO() throws Throwable {
 		
 		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_name1")));
 		 Thread.sleep(3000);
@@ -54,8 +54,8 @@ public class CO_Checkout extends SetupClass {
 	   
 	}
 
-	@Then("^user enter email ii$")
-	public void user_enter_email_ii() throws Throwable {
+	@Then("^user enter email CO$")
+	public void user_enter_email_CO() throws Throwable {
 	   
 		// Generate Random Email Address
 		int leftLimit = 97; // letter 'a'
@@ -85,8 +85,8 @@ public class CO_Checkout extends SetupClass {
 		
 	}
 
-	@Then("^user enter password and confirm password ii$")
-	public void user_enter_password_and_confirm_password_ii() throws Throwable {
+	@Then("^user enter password and confirm password CO$")
+	public void user_enter_password_and_confirm_password_CO() throws Throwable {
 		
 		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_password1")));
 		 Thread.sleep(3000);
@@ -100,8 +100,8 @@ public class CO_Checkout extends SetupClass {
 	    
 	}
 
-	@Then("^user enter captcha ii$")
-	public void user_enter_captcha_ii() throws Throwable {
+	@Then("^user enter captcha CO$")
+	public void user_enter_captcha_CO() throws Throwable {
 		
 		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.id("captchtext")));
 		 Thread.sleep(3000);
@@ -110,8 +110,8 @@ public class CO_Checkout extends SetupClass {
 	    
 	}
 
-	@Then("^user click on register button to complete sign up ii$")
-	public void user_click_on_register_button_to_complete_sign_up_ii() throws Throwable {
+	@Then("^user click on register button to complete sign up CO$")
+	public void user_click_on_register_button_to_complete_sign_up_CO() throws Throwable {
 		
 		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 		 Thread.sleep(3000);
