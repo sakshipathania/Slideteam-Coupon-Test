@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
@@ -15,6 +16,7 @@ import cucumber.api.java.en.Then;
 public class 2Checkout extends SetupClass {
 	
 	WebDriverWait wait = new WebDriverWait(driver,50);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	
 	@Given("^user is already on Website Home Page ii$")
@@ -132,6 +134,7 @@ public class 2Checkout extends SetupClass {
 		// choose a plan
 		js.executeScript("window.scrollBy(0,1000)");
 		 WebElement Subscribe_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='Monthly']")));
+		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn);
 			Thread.sleep(2000);
 		    Subscribe_btn.click();
 			Thread.sleep(6000);
@@ -142,6 +145,9 @@ public class 2Checkout extends SetupClass {
 	public void user_is_redirected_to_checkout_page_CO(int arg1) throws Throwable {
 		Thread.sleep(6000);
     WebElement Continue =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pg-checkout-shipping-info']/div[1]/div/div/div/div[2]/button")));
+	js.executeScript("arguments[0].scrollIntoView();",Continue);
+		Thread.sleep(1000);
+		Continue.click();
 	}
 
 	@Then("^user proceed to pay with (\\d+)CO (\\d+)CO$")
@@ -150,10 +156,13 @@ public class 2Checkout extends SetupClass {
 		Thread.sleep(1400);
 		// select 2co option
 		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pg-payment-methods']/div[1]/div[1]/label/img")));
-		Thread.sleep(2000);
+		js.executeScript("arguments[0].click();",co_btn);
+		     Thread.sleep(2000);
 	         co_btn.click();
 		Thread.sleep(5000);
-     WebElement Con_tinue = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id="pg-checkout-col2"]/div/div/button")));
+		     
+              WebElement Con_tinue = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id="pg-checkout-col2"]/div/div/button")));
+	     js.executeScript("arguments[0].click();",Con_tinue);
 	     } catch( NoSuchElementException popup) { 
 	     }
 		
