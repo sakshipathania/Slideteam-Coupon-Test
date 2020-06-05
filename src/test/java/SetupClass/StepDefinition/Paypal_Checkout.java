@@ -129,8 +129,8 @@ public class Paypal_Checkout extends SetupClass {
 		}
 	    
 	} 
-    @Then("^user is redirected to pricing page and choose a plan to pay (\\d+)CO$")
-	public void user_is_redirected_to_pricing_page_and_choose_a_plan_to_pay_CO(int arg1) throws Throwable {
+    @Then("^user is redirected to pricing page and choose a plan to pay$")
+	public void user_is_redirected_to_pricing_page_and_choose_a_plan_to_pay(int arg1) throws Throwable {
 		// choose a plan
 		js.executeScript("window.scrollBy(0,1000)");
 		 WebElement Subscribe_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='Monthly']")));
@@ -141,8 +141,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to checkout page (\\d+)CO$")
-	public void user_is_redirected_to_checkout_page_CO(int arg1) throws Throwable {
+	@Then("^user is redirected to checkout page$")
+	public void user_is_redirected_to_checkout_page(int arg1) throws Throwable {
 		Thread.sleep(6000);
     WebElement Continue =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pg-checkout-shipping-info']/div[1]/div/div/div/div[2]/button")));
 	js.executeScript("arguments[0].scrollIntoView();",Continue);
@@ -150,8 +150,8 @@ public class Paypal_Checkout extends SetupClass {
 		Continue.click();
 	}
 
-	@Then("^user proceed to pay with (\\d+)CO (\\d+)CO$")
-	public void user_proceed_to_pay_with_CO_CO(int arg1, int arg2) throws InterruptedException {
+	@Then("^user proceed to pay with paypal$")
+	public void user_proceed_to_pay_with_paypal(int arg1, int arg2) throws InterruptedException {
 	     try {
 		Thread.sleep(1400);
 		// select 2co option
@@ -224,8 +224,8 @@ public class Paypal_Checkout extends SetupClass {
 	}
 
 
-	@Then("^user deleted the account (\\d+)CO$")
-	public void user_deleted_the_account_CO(int arg1) throws Throwable {
+	@Then("^user deleted the account$")
+	public void user_deleted_the_account(int arg1) throws Throwable {
 		Thread.sleep(3000);
 	    driver.get("https://www.slideteam.net/");
 		Thread.sleep(2000);
