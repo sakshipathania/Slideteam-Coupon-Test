@@ -161,7 +161,7 @@ public class Paypal_Checkout extends SetupClass {
 	         co_btn.click();
 		Thread.sleep(5000);
 		     
-              WebElement Con_tinue = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id="pg-checkout-col2"]/div/div/button")));
+              WebElement Con_tinue = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pg-checkout-col2']/div/div/button")));
 	     js.executeScript("arguments[0].click();",Con_tinue);
 	     } catch( NoSuchElementException popup) { 
 	     }
