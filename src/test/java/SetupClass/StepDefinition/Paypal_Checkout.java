@@ -147,7 +147,7 @@ public class Paypal_Checkout extends SetupClass {
 	@Then("^user is redirected checkout page$")
 	public void user_is_redirected_checkout_page(int arg1) throws Throwable {
 		Thread.sleep(6000);
-    WebElement Continue =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pg-checkout-shipping-info']/div[1]/div/div/div/div[2]/button")));
+    WebElement Continue =  driver.findElement(By.xpath("//*[@id='pg-checkout-shipping-info']/div[1]/div/div/div/div[2]/button"));
 	js.executeScript("arguments[0].scrollIntoView();",Continue);
 		Thread.sleep(1000);
 		Continue.click();
