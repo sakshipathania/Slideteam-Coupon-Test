@@ -150,7 +150,7 @@ public class Paypal_Checkout extends SetupClass {
 	@Then("^user click on register buton to complete sign up$")
 	public void user_click_on_register_buton_to_complete_sign_up() throws Throwable {
 		
-		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.ClassName("pg-register-button-new hvr-rectangle-out btn-download")));
+		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.className("pg-register-button-new hvr-rectangle-out btn-download")));
 		 Thread.sleep(3000);
 		register_btn.click();
 		 Thread.sleep(5000);
