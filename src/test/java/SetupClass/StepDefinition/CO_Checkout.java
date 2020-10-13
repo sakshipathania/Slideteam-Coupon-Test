@@ -144,7 +144,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user enter captcha CO$")
 	public void user_enter_captcha_CO() throws Throwable {
 		
-		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.ClassName("captchaTextBox captchaTextBoxpopup form-control")));
+		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.className("captchaTextBox captchaTextBoxpopup form-control")));
 		 Thread.sleep(3000);
 		captcha.sendKeys("Y3Tt6bfwI");
 		 Thread.sleep(3000);
@@ -154,7 +154,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user click on register button to complete sign up CO$")
 	public void user_click_on_register_button_to_complete_sign_up_CO() throws Throwable {
 		
-		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.ClassName("pg-register-button-new hvr-rectangle-out btn-download")));
+		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.className("pg-register-button-new hvr-rectangle-out btn-download")));
 		 Thread.sleep(3000);
 		register_btn.click();
 		 Thread.sleep(5000);
