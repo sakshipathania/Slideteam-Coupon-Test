@@ -181,7 +181,7 @@ public class CO_Checkout extends SetupClass {
 		// choose a plan
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		js.executeScript("window.scrollBy(0,1000)");
-		 WebElement Subscribe_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='Monthly']")));
+		 WebElement Subscribe_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'buy now')]")));
 		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn);
 			Thread.sleep(2000);
 		    Subscribe_btn.click();
