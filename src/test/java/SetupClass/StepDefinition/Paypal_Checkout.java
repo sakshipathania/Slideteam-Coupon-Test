@@ -1,4 +1,4 @@
-package SetupClass.StepDefinition;
+/*package SetupClass.StepDefinition;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -226,7 +226,7 @@ public class Paypal_Checkout extends SetupClass {
 		
 		
 	}*/
-		     try
+		    /*try
 		{
 			WebElement cp_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='paypal_express']")));
 			Thread.sleep(2000);
@@ -315,7 +315,7 @@ public class Paypal_Checkout extends SetupClass {
 
 				 // Switch To Default Window
 				  
-				  driver.switchTo().window(currentWindow);
+				  /*driver.switchTo().window(currentWindow);
 		    
 	}
 
@@ -369,7 +369,7 @@ try {
 		js.executeScript("arguments[0].scrollIntoView();",continue_delete);
 		continue_delete.click();
 		 Thread.sleep(3000); */
-		WebElement Signout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
+		/*WebElement Signout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
 		Thread.sleep(3000);
 		Signout.click();
 	}
