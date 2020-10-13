@@ -168,13 +168,13 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 			 Thread.sleep(1000);
 		}
 		
-		WebElement Free_Slides = driver.findElement(By.className("nav-link"));
-		Thread.sleep(3000);
-		Free_Slides.click();
+		//WebElement Free_Slides = driver.findElement(By.className("nav-link"));
+		//Thread.sleep(3000);
+		//Free_Slides.click();
 		Thread.sleep(2000);
 		driver.get("https://www.slidegeeks.com/business/product/roadmap-free-powerpoint-slide");
 		Thread.sleep(6000);
-		WebElement Download= driver.findElement(By.xpath("(//span[contains(.,'Download this Presentation')])[2]")); 
+		WebElement Download= driver.findElement(By.xpath("//a[@href ='javascript:void(0)']"));
 		js.executeScript("arguments[0].scrollIntoView();", Download);
 		 Download.click();
 		Thread.sleep(3000);
