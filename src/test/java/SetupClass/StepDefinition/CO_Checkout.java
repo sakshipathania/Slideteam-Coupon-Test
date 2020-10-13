@@ -78,7 +78,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user navigates to sign up page CO$")
 	public void user_navigates_to_sign_up_page_CO() throws Throwable {
 		
-		WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Signup')]"));
+		WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Signup')]")));
 		 Thread.sleep(3000);
 		 login_signup_btn.click();
 		 Thread.sleep(3000);
