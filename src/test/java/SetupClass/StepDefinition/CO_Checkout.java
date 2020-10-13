@@ -70,7 +70,6 @@ public class CO_Checkout extends SetupClass {
 				catch(NoSuchElementException NCP) {
 					
 				}
-		Thread.sleep(1000);
 	    
 	    
 	}
@@ -78,10 +77,9 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user navigates to sign up page CO$")
 	public void user_navigates_to_sign_up_page_CO() throws Throwable {
 		
-		//WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Signup')]")));
-		driver.get("https://www.slidegeeks.com/register");
-		//Thread.sleep(3000);
-		// login_signup_btn.click();
+		WebElement login_signup_btn = driver.findElement(By.xpath("//a[contains(text(),'Signup')]"));
+		 Thread.sleep(3000);
+		 login_signup_btn.click();
 		 Thread.sleep(3000);
 	   
 	}
@@ -89,7 +87,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user enter name CO$")
 	public void user_enter_name_CO() throws Throwable {
 		
-		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_name1")));
+		 WebElement name =  driver.findElement(By.id("jform_name1"));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
 		 Thread.sleep(3000);
@@ -120,7 +118,7 @@ public class CO_Checkout extends SetupClass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		Thread.sleep(2000);
 		
-		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_email1")));
+		WebElement new_email =  driver.findElement(By.id("jform_email1"));
 		 Thread.sleep(3000);
 		 new_email.sendKeys(full_email);
 		 Thread.sleep(3000);
@@ -130,12 +128,12 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user enter password and confirm password CO$")
 	public void user_enter_password_and_confirm_password_CO() throws Throwable {
 		
-		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_password1")));
+		WebElement password =  driver.findElement(By.id("jform_password1"));
 		 Thread.sleep(3000);
 		password.sendKeys("Geeks@123");
 		 Thread.sleep(3000);
 		 
-		 WebElement confirm_passwoed = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_password2")));
+		 WebElement confirm_passwoed =  driver.findElement(By.id("jform_password2"));
 		 Thread.sleep(3000);
 		confirm_passwoed.sendKeys("Geeks@123");
 		 Thread.sleep(3000);
@@ -145,7 +143,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user enter captcha CO$")
 	public void user_enter_captcha_CO() throws Throwable {
 		
-		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.className("captchaTextBox captchaTextBoxpopup form-control")));
+		WebElement captcha =  driver.findElement(By.className("captchaTextBox captchaTextBoxpopup form-control"));
 		 Thread.sleep(3000);
 		captcha.sendKeys("Y3Tt6bfwI");
 		 Thread.sleep(3000);
@@ -155,7 +153,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user click on register button to complete sign up CO$")
 	public void user_click_on_register_button_to_complete_sign_up_CO() throws Throwable {
 		
-		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
+		WebElement register_btn =  driver.findElement(By.cssSelector(".pg-register-button-new"));
 		 Thread.sleep(3000);
 		register_btn.click();
 		 Thread.sleep(5000);
@@ -182,7 +180,7 @@ public class CO_Checkout extends SetupClass {
 		// choose a plan
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		js.executeScript("window.scrollBy(0,1000)");
-		 WebElement Subscribe_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'buy now')]")));
+		 WebElement Subscribe_btn  =  driver.findElement(By.xpath("//button[@type='submit'][contains(.,'buy now')]"));
 		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn);
 			Thread.sleep(2000);
 		    Subscribe_btn.click();
@@ -233,7 +231,7 @@ public class CO_Checkout extends SetupClass {
 		     try {
 		Thread.sleep(1400);
 		// select 2co option
-		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label")));
+		WebElement co_btn  =  driver.findElement(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label"));
 		Thread.sleep(2000);
 	         co_btn.click();
 		Thread.sleep(5000);
