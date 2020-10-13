@@ -88,7 +88,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user enter name CO$")
 	public void user_enter_name_CO() throws Throwable {
 		
-		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_name1")));
+		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.id("required form-control")));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
 		 Thread.sleep(3000);
@@ -119,7 +119,7 @@ public class CO_Checkout extends SetupClass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		Thread.sleep(2000);
 		
-		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_email1")));
+		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.className("validate-email required form-control")));
 		 Thread.sleep(3000);
 		 new_email.sendKeys(full_email);
 		 Thread.sleep(3000);
