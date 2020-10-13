@@ -358,7 +358,8 @@ try {
 		js.executeScript("arguments[0].scrollIntoView();",continue_delete);
 		continue_delete.click();
 		 Thread.sleep(3000); */
-		/*WebElement Signout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
+		
+		WebElement Signout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
 		Thread.sleep(3000);
 		Signout.click();
 	}
