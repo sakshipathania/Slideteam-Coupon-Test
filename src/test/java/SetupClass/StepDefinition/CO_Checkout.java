@@ -333,3 +333,4 @@ public class CO_Checkout extends SetupClass {
 		Signout.click();
 	
 }
+}
