@@ -19,9 +19,48 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 	
 	@Given("^user is already on Website Home Page ii$")
 	public void user_is_already_on_Website_Home_Page_ii() throws Throwable {
-		//driver.get(AppURL);
+		driver.get(AppURL);
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
+		Thread.sleep(1000);
+		try {
+			WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
+			if (logout.isEnabled()) {
+				logout.click();
+				Thread.sleep(8000);
+				driver.navigate().refresh();
+				Thread.sleep(2000);
+			}
+		} catch (NoSuchElementException Ext) {
+
+		}
+	    Thread.sleep(1000);
+		
+		try {
+			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
+			if(iframe.isDisplayed()) {
+				driver.switchTo().frame(iframe);   
+				 Actions act = new Actions(driver);
+				 act.moveToElement(driver.findElement(By.cssSelector("#title .icon-minimize"))).build().perform();
+				 Thread.sleep(2000);
+					WebElement chat1=driver.findElement(By.cssSelector("#title .icon-minimize"));
+					 Thread.sleep(1000);
+						chat1.click();
+						 Thread.sleep(1000);
+						 driver.switchTo().defaultContent();
+						 Thread.sleep(1000);
+						 driver.switchTo().parentFrame();
+					 Thread.sleep(1000);
+			}
+			else {
+				
+
+			System.out.println("chat window does not open");
+			}
+		}
+				catch(NoSuchElementException NCP) {
+					
+				}
 		Thread.sleep(1000);
 	    
 	}
@@ -29,7 +68,7 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 	@Then("^user navigates to sign up page ii$")
 	public void user_navigates_to_sign_up_page_ii() throws Throwable {
 		
-		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
+		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.home-page-wrapper.main-wrapper > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a")));
 		 Thread.sleep(3000);
 		 login_signup_btn.click();
 		 Thread.sleep(3000);
@@ -125,6 +164,21 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 			 
 			 Thread.sleep(1000);
 		}
+		
+		WebElement Free_Slides = driver.findElement(By ClassName("nav-link");
+		Thread.sleep(3000);
+		Free_Slides.click();
+		Thread.sleep(2000);
+		driver.get("https://www.slidegeeks.com/business/product/roadmap-free-powerpoint-slide");
+		Thread.sleep(2000);
+		WebElement Download= driver.findElement(By.ClassName("btn-download pg-button pg-addtocart pg-green-background-btn downloadFreePrd");
+		js.executeScript("arguments[0].scrollIntoView();", Download);
+		 dwnd_btn.click();
+		Thread.sleep(3000);
+							
+		WebElement Signout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
+		Thread.sleep(3000);
+		Signout.click();
 	    
 	}
 
