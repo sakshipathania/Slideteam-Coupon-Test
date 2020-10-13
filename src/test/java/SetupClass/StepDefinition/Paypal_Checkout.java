@@ -1,4 +1,4 @@
-/*package SetupClass.StepDefinition;
+package SetupClass.StepDefinition;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -27,18 +27,7 @@ public class Paypal_Checkout extends SetupClass {
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
 		Thread.sleep(1000);
-	    try {
-			WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
-			if (logout.isEnabled()) {
-				logout.click();
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-				Thread.sleep(2000);
-			}
-		} catch (NoSuchElementException Ext) {
-
-		}
-	    Thread.sleep(1000);
+	    
 		
 		try {
 			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
@@ -73,10 +62,10 @@ public class Paypal_Checkout extends SetupClass {
 	@Then("^user navigates to sign up page$")
 	public void user_navigates_to_sign_up_page() throws Throwable {
 		
-		 //WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Signup')]")));
-		// Thread.sleep(3000);
-		 //login_signup_btn.click();
-		driver.get("https://www.slidegeeks.com/register");
+		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Signup')]")));
+		Thread.sleep(3000);
+		 login_signup_btn.click();
+		//driver.get("https://www.slidegeeks.com/register");
 		 Thread.sleep(3000);
 	   
 	   
@@ -226,7 +215,7 @@ public class Paypal_Checkout extends SetupClass {
 		
 		
 	}*/
-		    /*try
+		    try
 		{
 			WebElement cp_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='paypal_express']")));
 			Thread.sleep(2000);
@@ -306,7 +295,7 @@ public class Paypal_Checkout extends SetupClass {
 			Thread.sleep(3000);
 		    System.out.println("Title of the Page is --> "+pp_page_title);
 		    
-		/* // place order button 
+		 // place order button 
 			 WebElement cancel_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(.,'Cancel and return to Slideteam Pte. Ltd.')])[2]")));
 		js.executeScript("arguments[0].scrollIntoView();",cancel_order_btn);		
 		Thread.sleep(2000);
@@ -315,7 +304,7 @@ public class Paypal_Checkout extends SetupClass {
 
 				 // Switch To Default Window
 				  
-				  /*driver.switchTo().window(currentWindow);
+				  driver.switchTo().window(currentWindow);
 		    
 	}
 
