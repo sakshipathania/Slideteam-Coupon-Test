@@ -166,9 +166,9 @@ public class CO_Checkout extends SetupClass {
     @Then("^user is redirected to pricing page and choose a plan to pay (\\d+)CO$")
 	public void user_is_redirected_to_pricing_page_and_choose_a_plan_to_pay_CO(int arg1) throws Throwable {
 		// choose a plan
-		driver.get("https://www.slidegeeks.com/subscriptions");
+		//driver.get("https://www.slidegeeks.com/subscriptions");
 		js.executeScript("window.scrollBy(0,1000)");
-		 WebElement Subscribe_btn  =  driver.findElement(By.xpath("//button[@type='submit'][contains(.,'buy now')]"));
+		 WebElement Subscribe_btn  =  driver.findElement(By.xpath("//button[@type='submit'][contains(.,'BUY NOW')]"));
 		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn);
 			Thread.sleep(2000);
 		    Subscribe_btn.click();
