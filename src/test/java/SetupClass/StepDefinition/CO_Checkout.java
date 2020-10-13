@@ -1,4 +1,4 @@
-/*package SetupClass.StepDefinition;
+package SetupClass.StepDefinition;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -185,11 +185,11 @@ public class CO_Checkout extends SetupClass {
 		Continue.click();
 	}*/
 
-	/*@Then("^user proceed to pay with (\\d+)CO (\\d+)CO$")
+	@Then("^user proceed to pay with (\\d+)CO (\\d+)CO$")
 	public void user_proceed_to_pay_with_CO_CO(int arg1, int arg2) throws InterruptedException {
 	    
 		Thread.sleep(1400);
-		// select 2co option
+		/*// select 2co option
 		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[4]/div/div[3]/div[1]/div[1]/form[1]/div/div[2]/label")));
 		js.executeScript("arguments[0].click();",co_btn);
 		     Thread.sleep(2000);
@@ -215,7 +215,7 @@ public class CO_Checkout extends SetupClass {
 		}
 		
 		
-	}
+	}*/
 		     try {
 		Thread.sleep(1400);
 		// select 2co option
@@ -312,7 +312,7 @@ public class CO_Checkout extends SetupClass {
 		js.executeScript("arguments[0].scrollIntoView();",continue_delete);
 		continue_delete.click();
 		 Thread.sleep(3000);
-	} 
+	} */
 		
 
        WebElement Signout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
