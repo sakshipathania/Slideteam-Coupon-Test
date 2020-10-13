@@ -200,7 +200,7 @@ public class CO_Checkout extends SetupClass {
 
 	@Then("^user proceed to pay with (\\d+)CO (\\d+)CO$")
 	public void user_proceed_to_pay_with_CO_CO(int arg1, int arg2) throws InterruptedException {
-	     try {
+	    
 		Thread.sleep(1400);
 		/*// select 2co option
 		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[4]/div/div[3]/div[1]/div[1]/form[1]/div/div[2]/label")));
