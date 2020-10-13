@@ -300,7 +300,7 @@ public class Paypal_Checkout extends SetupClass {
 		js.executeScript("arguments[0].scrollIntoView();",cancel_order_btn);		
 		Thread.sleep(2000);
 			    cancel_order_btn.click();
-				Thread.sleep(5000);*/
+				Thread.sleep(5000);
 
 				 // Switch To Default Window
 				  
