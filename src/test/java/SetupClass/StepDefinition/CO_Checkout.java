@@ -59,10 +59,25 @@ public class CO_Checkout extends SetupClass {
 					
 				}
 	    
+		Thread.sleep(3000);
 	    
+		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
+		 Thread.sleep(3000);
+		 login_email.sendKeys("himanshi.sharma+pgeeks@slidetech.in");
+		 Thread.sleep(3000);
+		 
+		 WebElement login_password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("span.pg-login-form-password > input:nth-child(1)")));
+		 Thread.sleep(3000);
+		login_password.sendKeys("123456");
+		 Thread.sleep(3000);
+		 
+		 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-button-login")));
+		 Thread.sleep(3000);
+		 login_btn.click();
+		 Thread.sleep(3000);
 	}
 
-	@Then("^user navigates to sign up page CO$")
+	/*@Then("^user navigates to sign up page CO$")
 	public void user_navigates_to_sign_up_page_CO() throws Throwable {
 		
 		//WebElement login_signup_btn = driver.findElement(By.xpath("//a[@href ='/register']"));
@@ -163,11 +178,13 @@ public class CO_Checkout extends SetupClass {
 			 Thread.sleep(1000);
 		}
 	    
-	} 
+	} */
+	
     @Then("^user is redirected to pricing page and choose a plan to pay (\\d+)CO$")
 	public void user_is_redirected_to_pricing_page_and_choose_a_plan_to_pay_CO(int arg1) throws Throwable {
 		// choose a plan
-		//driver.get("https://www.slidegeeks.com/subscriptions");
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		Thread.sleep(30000;
 		js.executeScript("window.scrollBy(0,1000)");
 		 WebElement Subscribe_btn  =  driver.findElement(By.xpath("//button[@type='submit'][contains(.,'BUY NOW')]"));
 		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn);
