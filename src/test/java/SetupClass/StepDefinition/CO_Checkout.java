@@ -60,10 +60,13 @@ public class CO_Checkout extends SetupClass {
 				}
 	    
 		Thread.sleep(3000);
-		WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
+		/*WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
 		 Thread.sleep(3000);
 		 login_signup_btn.click();
 		 Thread.sleep(3000);
+		 */
+		driver.get("https://www.slidegeeks.com/account");
+		Threas.sleep(3000);
 	    
 		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
 		 Thread.sleep(3000);
