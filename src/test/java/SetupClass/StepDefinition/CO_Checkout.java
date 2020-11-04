@@ -76,7 +76,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user enter name CO$")
 	public void user_enter_name_CO() throws Throwable {
 		
-		 WebElement name =  driver.findElement(By.id("jform_name1"));
+		 WebElement name =  driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[1]/div[2]/form/div[1]/div[1]/div/input"));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
 		 Thread.sleep(3000);
