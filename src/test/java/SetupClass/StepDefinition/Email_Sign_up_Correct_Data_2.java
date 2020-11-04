@@ -32,14 +32,14 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 	@Then("^user navigates to sign up page ii$")
 	public void user_navigates_to_sign_up_page_ii() throws Throwable {
 		
-		 //WebElement login_signup_btn = driver.findElement(By.xpath("//a[@href ='/register']"));
+		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
 		 Thread.sleep(3000);
-		driver.get("https://www.slidegeeks.com/register");
-		// login_signup_btn.click();
+		 login_signup_btn.click();
 		 Thread.sleep(3000);
 	   
+	   
 		
-		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_name1")));
+		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.id("/html/body/div[1]/div[3]/div/div/div/div/div[1]/div[2]/form/div[1]/div[1]/div/input")));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
 		 Thread.sleep(3000);
