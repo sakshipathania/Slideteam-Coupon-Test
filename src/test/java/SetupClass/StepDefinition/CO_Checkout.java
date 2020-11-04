@@ -66,7 +66,7 @@ public class CO_Checkout extends SetupClass {
 		 Thread.sleep(3000);
 		 */
 		driver.get("https://www.slidegeeks.com/account");
-		Threas.sleep(3000);
+		Thread.sleep(3000);
 	    
 		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
 		 Thread.sleep(3000);
