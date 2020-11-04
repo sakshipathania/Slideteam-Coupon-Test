@@ -32,7 +32,7 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 	@Then("^user navigates to sign up page ii$")
 	public void user_navigates_to_sign_up_page_ii() throws Throwable {
 		
-		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Signup')]")));
+		 WebElement login_signup_btn = Driver.findElement(By.xpath("//a[@href ='/register']"));
 		 Thread.sleep(3000);
 		 login_signup_btn.click();
 		 Thread.sleep(3000);
@@ -103,7 +103,7 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		 Download.click();
 		Thread.sleep(3000);
 							
-		WebElement Signout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
+		WebElement Signout = Driver.findElement(By.xpath("//a[@href ='/logout']"));
 		Thread.sleep(3000);
 		Signout.click();
 	    
