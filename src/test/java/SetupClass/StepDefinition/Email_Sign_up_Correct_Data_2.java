@@ -98,7 +98,7 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		Thread.sleep(6000);
 		
 		//WebElement Download= driver.findElement(By.cssSelector("a.btn-download"));
-		WebElement Download = (WebElement)js.executeScript("$('a.btn-download')", "");
+		WebElement Download = (WebElement)js.executeScript("('a.btn-download')", "");
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].scrollIntoView();", Download);
 		 Download.click();
