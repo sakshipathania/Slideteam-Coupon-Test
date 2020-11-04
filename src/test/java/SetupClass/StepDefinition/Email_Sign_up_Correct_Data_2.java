@@ -103,7 +103,7 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		 Download.click();
 		Thread.sleep(3000);
 							
-		WebElement Signout = Driver.findElement(By.xpath("//a[@href ='/logout']"));
+		WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
 		Thread.sleep(3000);
 		Signout.click();
 	    
