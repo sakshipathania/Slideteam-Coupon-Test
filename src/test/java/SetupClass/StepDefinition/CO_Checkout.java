@@ -68,17 +68,17 @@ public class CO_Checkout extends SetupClass {
 		driver.get("https://www.slidegeeks.com/account");
 		Thread.sleep(3000);
 	    
-		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
+		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div:nth-child(1) > input")));
 		 Thread.sleep(3000);
 		 login_email.sendKeys("himanshi.sharma+pgeeks@slidetech.in");
 		 Thread.sleep(3000);
 		 
-		 WebElement login_password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("span.pg-login-form-password > input:nth-child(1)")));
+		 WebElement login_password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div:nth-child(2) > input")));
 		 Thread.sleep(3000);
 		login_password.sendKeys("123456");
 		 Thread.sleep(3000);
 		 
-		 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-button-login")));
+		 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div.btn-wrapper.login_btn > input")));
 		 Thread.sleep(3000);
 		 login_btn.click();
 		 Thread.sleep(3000);
@@ -340,7 +340,7 @@ public class CO_Checkout extends SetupClass {
 	} */
 		
 
-       WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
+       WebElement Signout = driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a"));
 		Thread.sleep(3000);
 		Signout.click();
 	
