@@ -32,9 +32,10 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 	@Then("^user navigates to sign up page ii$")
 	public void user_navigates_to_sign_up_page_ii() throws Throwable {
 		
-		 WebElement login_signup_btn = driver.findElement(By.xpath("//a[@href ='/register']"));
+		 //WebElement login_signup_btn = driver.findElement(By.xpath("//a[@href ='/register']"));
 		 Thread.sleep(3000);
-		 login_signup_btn.click();
+		driver.get("https://www.slidegeeks.com/register");
+		// login_signup_btn.click();
 		 Thread.sleep(3000);
 	   
 		
