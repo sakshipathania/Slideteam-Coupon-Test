@@ -65,7 +65,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user navigates to sign up page CO$")
 	public void user_navigates_to_sign_up_page_CO() throws Throwable {
 		
-		WebElement login_signup_btn = Driver.findElement(By.xpath("//a[@href ='/register']"));
+		WebElement login_signup_btn = driver.findElement(By.xpath("//a[@href ='/register']"));
 		 Thread.sleep(3000); 
 		 login_signup_btn.click();
 		 Thread.sleep(3000);
@@ -315,7 +315,7 @@ public class CO_Checkout extends SetupClass {
 	} */
 		
 
-       WebElement Signout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
+       WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
 		Thread.sleep(3000);
 		Signout.click();
 	
