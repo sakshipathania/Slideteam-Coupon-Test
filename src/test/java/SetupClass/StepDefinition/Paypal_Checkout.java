@@ -54,12 +54,25 @@ public class Paypal_Checkout extends SetupClass {
 				catch(NoSuchElementException NCP) {
 					
 				}
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 	    
-	    
+	    WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
+		 Thread.sleep(3000);
+		 login_email.sendKeys("himanshi.sharma+pgeeks@slidetech.in");
+		 Thread.sleep(3000);
+		 
+		 WebElement login_password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("span.pg-login-form-password > input:nth-child(1)")));
+		 Thread.sleep(3000);
+		login_password.sendKeys("123456");
+		 Thread.sleep(3000);
+		 
+		 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-button-login")));
+		 Thread.sleep(3000);
+		 login_btn.click();
+		 Thread.sleep(3000);
 	}
 
-	@Then("^user navigates to sign up page$")
+	/*@Then("^user navigates to sign up page$")
 	public void user_navigates_to_sign_up_page() throws Throwable {
 		
 		// WebElement login_signup_btn = driver.findElement(By.xpath("//a[@href ='/register']"));
@@ -162,7 +175,8 @@ public class Paypal_Checkout extends SetupClass {
 			 Thread.sleep(1000);
 		}
 	    
-	} 
+	} */
+	
     @Then("^user is redirected to pricing page and choose the plan to pay$")
 	public void user_is_redirected_to_pricing_page_and_choose_the_plan_to_pay(int arg1) throws Throwable {
 		// choose a plan
