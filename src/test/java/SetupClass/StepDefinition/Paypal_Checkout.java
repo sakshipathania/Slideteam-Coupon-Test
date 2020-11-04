@@ -75,7 +75,7 @@ public class Paypal_Checkout extends SetupClass {
 	@Then("^user enter name$")
 	public void user_enter_name() throws Throwable {
 		
-		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_name1")));
+		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[1]/div[2]/form/div[1]/div[1]/div/input")));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
 		 Thread.sleep(3000);
