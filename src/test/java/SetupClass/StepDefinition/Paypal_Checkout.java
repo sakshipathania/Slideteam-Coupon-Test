@@ -63,7 +63,7 @@ public class Paypal_Checkout extends SetupClass {
 		driver.get("https://www.slidegeeks.com/account");
 		Thread.sleep(2000);
 		
-	    WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
+	   WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
 		 Thread.sleep(3000);
 		 login_email.sendKeys("himanshi.sharma+pgeeks@slidetech.in");
 		 Thread.sleep(3000);
@@ -381,7 +381,7 @@ try {
 		continue_delete.click();
 		 Thread.sleep(3000); */
 		
-		WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
+		WebElement Signout = driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a"));
 		Thread.sleep(3000);
 		Signout.click();
 	}
