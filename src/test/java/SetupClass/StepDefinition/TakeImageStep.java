@@ -8,7 +8,7 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 
 
-	public class TakeImageStep extends Set {
+	public class TakeImageStep extends SetupClass  {
 		@After
 		public void tearDown(Scenario scenario) {
 		    if (scenario.isFailed()) {	    	
