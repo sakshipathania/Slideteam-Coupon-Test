@@ -32,14 +32,14 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 	@Then("^user navigates to sign up page ii$")
 	public void user_navigates_to_sign_up_page_ii() throws Throwable {
 		
-		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
+		/* WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
 		 Thread.sleep(3000);
 		 login_signup_btn.click();
-		 Thread.sleep(3000);
-	   
-	   
+		 Thread.sleep(3000);*/
+		driver.get("https://www.slidegeeks.com/register");
+	
 		
-		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.id("/html/body/div[1]/div[3]/div/div/div/div/div[1]/div[2]/form/div[1]/div[1]/div/input")));
+		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_name1")));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
 		 Thread.sleep(3000);
@@ -66,24 +66,24 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		Thread.sleep(2000);
 		
-		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_email1")));
+		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_email1")));
 		 Thread.sleep(3000);
 		 new_email.sendKeys(full_email);
 		 Thread.sleep(3000);
 		
 	
-		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_password1")));
+		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password1")));
 		 Thread.sleep(3000);
 		password.sendKeys("Geeks@123");
 		 Thread.sleep(3000);
 		 
-		 WebElement confirm_passwoed = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_password2")));
+		 WebElement confirm_passwoed = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password2")));
 		 Thread.sleep(3000);
 		confirm_passwoed.sendKeys("Geeks@123");
 		 Thread.sleep(3000);
 	    
 	
-		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.id("captchtext")));
+		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#captchtext")));
 		 Thread.sleep(3000);
 		captcha.sendKeys("Y3Tt6bfwI");
 		 Thread.sleep(3000);
