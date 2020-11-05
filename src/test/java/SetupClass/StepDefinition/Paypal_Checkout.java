@@ -56,14 +56,11 @@ public class Paypal_Checkout extends SetupClass {
 				}
 		Thread.sleep(3000);
 	    
-		/*WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
-		 Thread.sleep(3000);
-		 login_signup_btn.click();
-		 Thread.sleep(3000);*/
-		driver.get("https://www.slidegeeks.com/account");
-		Thread.sleep(2000);
 		
-	  WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div:nth-child(1) > input")));
+		driver.get("https://www.slidegeeks.com/account");
+		Thread.sleep(3000);
+	    
+		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div:nth-child(1) > input")));
 		 Thread.sleep(3000);
 		 login_email.sendKeys("himanshi.sharma+pgeeks@slidetech.in");
 		 Thread.sleep(3000);
