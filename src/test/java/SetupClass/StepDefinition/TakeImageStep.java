@@ -3,7 +3,7 @@ package SetupClass.StepDefinition;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import SetupClass.Set;
+import SetupClass.SetupClass;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 
