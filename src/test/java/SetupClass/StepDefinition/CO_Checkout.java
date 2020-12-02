@@ -154,7 +154,7 @@ public class CO_Checkout extends SetupClass {
 		 try {
 		Thread.sleep(1400);
 		// select 2co option
-		WebElement co_btn  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label > div > p));
+		WebElement co_btn  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label > div > p")));
 		Thread.sleep(2000);
 	         co_btn.click();
 		Thread.sleep(5000);
