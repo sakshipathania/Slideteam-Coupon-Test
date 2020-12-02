@@ -201,7 +201,7 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user signout the account (\\d+)CO$")
 	public void user_signout_the_account_CO(int arg1) throws Throwable {
 		Thread.sleep(3000);
-	    driver.get("https://www.slidegeeks.com/");
+	    driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		Thread.sleep(2000);
 		
 
