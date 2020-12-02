@@ -118,8 +118,9 @@ public class Paypal_Checkout extends SetupClass {
     @Then("^user is redirected to pricing page and choose the plan to pay$")
 	public void user_is_redirected_to_pricing_page_and_choose_the_plan_to_pay(int arg1) throws Throwable {
 		// choose a plan
-		//driver.get("https://www.slidegeeks.com/subscriptions");
-		WebElement Subscribe_btn  =  driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/section[2]/div/div/div[2]/div/div/div/div[1]/div/form/div[2]/div/span/button"));
+		Thread.sleep(3000);
+		//js.executeScript("window.scrollBy(0,1000)");
+		 WebElement Subscribe_btn  =  driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/section[2]/div/div/div[2]/div/div/div/div[1]/div/form/div[2]/div/span/button"));
 		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn);
 			Thread.sleep(2000);
 		    Subscribe_btn.click();
