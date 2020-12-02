@@ -24,10 +24,10 @@ public class Paypal_Checkout extends SetupClass {
 	@Given("^user is already on Website Home Page$")
 	public void user_is_already_on_Website_Home_Page() throws Throwable {
 		driver.get(AppURL);
+		//driver.get("https://www.slidegeeks.com/");
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
 		Thread.sleep(1000);
-	    
 		
 		try {
 			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
@@ -54,10 +54,10 @@ public class Paypal_Checkout extends SetupClass {
 				catch(NoSuchElementException NCP) {
 					
 				}
-		Thread.sleep(3000);
 	    
-		
-		driver.get("https://www.slidegeeks.com/account");
+		Thread.sleep(3000);
+		driver.get("https://www.slidegeeks.com/register");
+		Thread.sleep(3000);
 		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_name1")));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
