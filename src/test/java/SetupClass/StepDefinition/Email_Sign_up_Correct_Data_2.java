@@ -95,10 +95,10 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		 Thread.sleep(5000);
 		
 
-		driver.get("https://www.slidegeeks.com/business/product/roadmap-free-powerpoint-slide");
+		driver.get("https://www.slidegeeks.com/free-downloads");
 		Thread.sleep(6000);
 		
-		WebElement Download= driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[1]/section[2]/div/div/div[2]/div/div[1]/div/div[1]/a"));
+		WebElement Download= driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/section[2]/div/div/div[1]/div/div[2]/div[1]/div/div/p/a/span"));
 		
 		//WebElement Download = (WebElement)js.executeScript("('a.btn-download')", "");
 		Thread.sleep(3000);
