@@ -154,18 +154,18 @@ public class Paypal_Checkout extends SetupClass {
 		}
 		
 		Thread.sleep(1000);
-		     try
-		{
-			  WebElement place_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div.checkout-box-wrapper.checkout-order > div > div > table > tbody > tr:nth-child(4) > td:nth-child(1) > button.btn.primary-btn.pg-button.pg-checkout-continue")));
+		   try {
+			
+		 WebElement place_order_btn  =  driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div.checkout-box-wrapper.checkout-order > div > div > table > tbody > tr:nth-child(4) > td:nth-child(1) > button.btn.primary-btn.pg-button.pg-checkout-continue"));
+			Thread.sleep(2000);
 			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
-			Thread.sleep(3000);
-		          place_order_btn.click();
-			  Thread.sleep(5000);
+			//js.executeScript("arguments[0].click();", place_order_btn);
+			Thread.sleep(2000);
+		    place_order_btn.click();
+			Thread.sleep(5000);
+		} catch (NoSuchElementException popup) {
 		}
-		 catch (Exception e) {
-			 //TODO: handle exception	 
-	        } 
-		Thread.sleep(1000);
+		
 		
 	}
 
