@@ -151,38 +151,10 @@ public class CO_Checkout extends SetupClass {
 	@Then("^user proceed to pay with (\\d+)CO (\\d+)CO$")
 	public void user_proceed_to_pay_with_CO_CO(int arg1, int arg2) throws InterruptedException {
 	    
-		Thread.sleep(1400);
-		/*// select 2co option
-		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[4]/div/div[3]/div[1]/div[1]/form[1]/div/div[2]/label")));
-		js.executeScript("arguments[0].click();",co_btn);
-		     Thread.sleep(2000);
-	         co_btn.click();
-		Thread.sleep(5000);
-		     
-              WebElement Con_tinue = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pg-checkout-col2']/div/div/button")));
-	     js.executeScript("arguments[0].click();",Con_tinue);
-	     } catch( NoSuchElementException popup) { 
-	     }
-		
-		// place order button 
-		try {
-			
-		 WebElement place_order_btn  =  driver.findElement(By.cssSelector("#place-order-trigger > span"));
-			Thread.sleep(2000);
-			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
-			//js.executeScript("arguments[0].click();", place_order_btn);
-			Thread.sleep(2000);
-		    place_order_btn.click();
-			Thread.sleep(5000);
-		} catch (NoSuchElementException popup) {
-		}
-		
-		
-	}*/
-		     try {
+		 try {
 		Thread.sleep(1400);
 		// select 2co option
-		WebElement co_btn  =  driver.findElement(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label"));
+		WebElement co_btn  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label > div > p));
 		Thread.sleep(2000);
 	         co_btn.click();
 		Thread.sleep(5000);
