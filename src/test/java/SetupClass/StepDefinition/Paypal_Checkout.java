@@ -137,8 +137,8 @@ public class Paypal_Checkout extends SetupClass {
 		Continue.click();
 	}*/
 
-	@Then("^user proceed to pay with paypal$")
-	public void user_proceed_to_pay_with_paypal(int arg1, int arg2) throws InterruptedException {
+	@Then("^user proceed to pay with (\\d+)paypal (\\d+)paypal$")
+	public void user_proceed_to_pay_with_paypal_paypal(int arg1, int arg2) throws InterruptedException {
 	
 		Thread.sleep(1400);
 		
