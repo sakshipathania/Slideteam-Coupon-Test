@@ -58,50 +58,12 @@ public class Paypal_Checkout extends SetupClass {
 	    
 		
 		driver.get("https://www.slidegeeks.com/account");
-		Thread.sleep(3000);
-	    
-		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div:nth-child(1) > input")));
-		 Thread.sleep(3000);
-		 login_email.sendKeys("himanshi.sharma+pgeeks@slidetech.in");
-		 Thread.sleep(3000);
-		 
-		 WebElement login_password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div:nth-child(2) > input")));
-		 Thread.sleep(3000);
-		login_password.sendKeys("123456");
-		 Thread.sleep(3000);
-		 
-		 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div.btn-wrapper.login_btn > input")));
-		 Thread.sleep(3000);
-		 login_btn.click();
-		 Thread.sleep(3000);
-	}
-
-	/*@Then("^user navigates to sign up page$")
-	public void user_navigates_to_sign_up_page() throws Throwable {
-		
-		// WebElement login_signup_btn = driver.findElement(By.xpath("//a[@href ='/register']"));
-		driver.get("https://www.slidegeeks.com/register");
-		Thread.sleep(3000);
-		// login_signup_btn.click();
-		//driver.get("https://www.slidegeeks.com/register");
-		// Thread.sleep(3000);
-	   
-	   
-	}
-
-	@Then("^user enter name$")
-	public void user_enter_name() throws Throwable {
-		
-		 WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[1]/div[2]/form/div[1]/div[1]/div/input")));
+		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_name1")));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
 		 Thread.sleep(3000);
 	   
-	}
-
-	@Then("^user enter email$")
-	public void user_enter_email() throws Throwable {
-	   
+	
 		// Generate Random Email Address
 		int leftLimit = 97; // letter 'a'
 	    int rightLimit = 122; // letter 'z'
@@ -123,70 +85,41 @@ public class Paypal_Checkout extends SetupClass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		Thread.sleep(2000);
 		
-		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_email1")));
+		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_email1")));
 		 Thread.sleep(3000);
 		 new_email.sendKeys(full_email);
 		 Thread.sleep(3000);
 		
-	}
-
-	@Then("^user enter password and confirm password$")
-	public void user_enter_password_and_confirm_password() throws Throwable {
-		
-		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_password1")));
+	
+		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password1")));
 		 Thread.sleep(3000);
 		password.sendKeys("Geeks@123");
 		 Thread.sleep(3000);
 		 
-		 WebElement confirm_passwoed = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_password2")));
+		 WebElement confirm_passwoed = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password2")));
 		 Thread.sleep(3000);
 		confirm_passwoed.sendKeys("Geeks@123");
 		 Thread.sleep(3000);
 	    
-	}
-
-	@Then("^user enter captcha$")
-	public void user_enter_captcha() throws Throwable {
-		
-		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.id("captchtext")));
+	
+		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#captchtext")));
 		 Thread.sleep(3000);
 		captcha.sendKeys("Y3Tt6bfwI");
 		 Thread.sleep(3000);
 	    
-	}
 
-	@Then("^user click on register buton to complete sign up$")
-	public void user_click_on_register_buton_to_complete_sign_up() throws Throwable {
-		
-		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.className("pg-register-button-new hvr-rectangle-out btn-download")));
+		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 		 Thread.sleep(3000);
 		register_btn.click();
 		 Thread.sleep(5000);
-		 
-		 try
-		 {
-			// Log out
-			 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[2]/a")));
-			 Thread.sleep(3000);
-			 login_btn.click();
-			 Thread.sleep(3000);
-			 log.info("Hey, I am on Home page Again after Sign out");
-			 Thread.sleep(1000);
-		 }
-		 catch (Exception e) {
-			// TODO: handle exception
-			 
-			 Thread.sleep(1000);
-		}
-	    
-	} */
+	}
+
 	
     @Then("^user is redirected to pricing page and choose the plan to pay$")
 	public void user_is_redirected_to_pricing_page_and_choose_the_plan_to_pay(int arg1) throws Throwable {
 		// choose a plan
-		driver.get("https://www.slidegeeks.com/subscriptions");
-		js.executeScript("window.scrollBy(0,1000)");
-		 WebElement Subscribe_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'buy now')]")));
+		//driver.get("https://www.slidegeeks.com/subscriptions");
+		WebElement Subscribe_btn  =  driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/section[2]/div/div/div[2]/div/div/div/div[1]/div/form/div[2]/div/span/button"));
 		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn);
 			Thread.sleep(2000);
 		    Subscribe_btn.click();
@@ -207,36 +140,10 @@ public class Paypal_Checkout extends SetupClass {
 	public void user_proceed_to_pay_with_paypal(int arg1, int arg2) throws InterruptedException {
 	
 		Thread.sleep(1400);
-		// select 2co option
-		/*WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-payment-methods > div.pg-payment-methods.clearfix > div:nth-child(2) > label > img")));
-		js.executeScript("arguments[0].click();",co_btn);
-		     Thread.sleep(2000);
-	         co_btn.click();
-		Thread.sleep(5000);
-		     
-              WebElement Con_tinue = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pg-checkout-col2']/div/div/button")));
-	     js.executeScript("arguments[0].click();",Con_tinue);
-	     } catch( NoSuchElementException popup) { 
-	     }
 		
-		// place order button 
-		try {
-			
-		 WebElement place_order_btn  =  driver.findElement(By.cssSelector("#place-order-trigger > span"));
-			Thread.sleep(2000);
-			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
-			//js.executeScript("arguments[0].click();", place_order_btn);
-			Thread.sleep(2000);
-		    place_order_btn.click();
-			Thread.sleep(5000);
-		} catch (NoSuchElementException popup) {
-		}
-		
-		
-	}*/
 		    try
 		{
-			WebElement cp_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='paypal_express']")));
+			WebElement cp_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(1) > label > i")));
 			Thread.sleep(2000);
 		    cp_btn.click();
 		    Thread.sleep(3000);
@@ -258,31 +165,7 @@ public class Paypal_Checkout extends SetupClass {
 			 //TODO: handle exception	 
 	        } 
 		Thread.sleep(1000);
-		try {
-			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
-			if(iframe.isDisplayed()) {
-				driver.switchTo().frame(iframe);   
-				 Actions act = new Actions(driver);
-				 act.moveToElement(driver.findElement(By.cssSelector("#title .icon-minimize"))).build().perform();
-				 Thread.sleep(2000);
-					WebElement chat1=driver.findElement(By.cssSelector("#title .icon-minimize"));
-					 Thread.sleep(1000);
-						chat1.click();
-						 Thread.sleep(1000);
-						 driver.switchTo().defaultContent();
-						 Thread.sleep(1000);
-						 driver.switchTo().parentFrame();
-					 Thread.sleep(1000);
-			}
-			else {
-				
-
-			System.out.println("chat window does not open");
-			}
-		}
-				catch(NoSuchElementException NCP) {
-					
-				}
+		
 	}
 
 	@Then("^paypal popup appears and user navigates back to my account pp$")
@@ -329,56 +212,13 @@ public class Paypal_Checkout extends SetupClass {
 
 
 	@Then("^user Signout account PP$")
-	public void user_deleted_the_account(int arg1) throws Throwable {
+	public void user_Signout_account_PP(int arg1) throws Throwable {
 		Thread.sleep(3000);
-	    driver.get("https://www.slidegeeks.com/");
+	    driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		Thread.sleep(2000);
 		
-
-		/* driver.findElement(By.cssSelector("ul.header > li:nth-child(1) > a:nth-child(1)")).click();
-		 Thread.sleep(3000);
-		 
 		
-
-
-try {
-			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
-			if(iframe.isDisplayed()) {
-				driver.switchTo().frame(iframe);   
-				 Actions act = new Actions(driver);
-				 act.moveToElement(driver.findElement(By.cssSelector("#title .icon-minimize"))).build().perform();
-				 Thread.sleep(2000);
-					WebElement chat1=driver.findElement(By.cssSelector("#title .icon-minimize"));
-					 Thread.sleep(1000);
-						chat1.click();
-						 Thread.sleep(1000);
-						 driver.switchTo().defaultContent();
-						 Thread.sleep(1000);
-						 driver.switchTo().parentFrame();
-					 Thread.sleep(1000);
-			}
-			else {
-				
-
-			System.out.println("chat window does not open");
-			}
-		}
-				catch(NoSuchElementException NCP) {
-					
-				}
-
-
-      
-		 WebElement delete_account = driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]"));
-		js.executeScript("arguments[0].scrollIntoView();",delete_account);
-		 delete_account.click();
-		 Thread.sleep(3000);
-		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Continue')]")));
-		js.executeScript("arguments[0].scrollIntoView();",continue_delete);
-		continue_delete.click();
-		 Thread.sleep(3000); */
-		
-		WebElement Signout = driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a"));
+		 WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
 		Thread.sleep(3000);
 		Signout.click();
 	}
