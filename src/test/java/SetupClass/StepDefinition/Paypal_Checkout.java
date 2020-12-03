@@ -149,7 +149,7 @@ public class Paypal_Checkout extends SetupClass {
 		    cp_btn.click();
 		    Thread.sleep(3000);
 		}
-		catch (Exception e) {
+		catch (NoSuchElementException popup) {
 			// TODO: handle exception
 		}
 		
