@@ -114,8 +114,9 @@ public class Paypal_Checkout extends SetupClass {
 		register_btn.click();
 		 Thread.sleep(5000);
 	}
-   @Then("^user is redirected to pricing page and check the text1 (\\d+)PP$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text1_PP(int arg1) throws Throwable {
+	
+    @Then("^user is redirected to pricing page and check the text1 PP1$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text1_PP1() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		       Thread.sleep(4000);
@@ -134,10 +135,12 @@ public class Paypal_Checkout extends SetupClass {
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
 		Thread.sleep(5000);
+		//wait.implictywait(driver);
+		
 	}
 	
-	@Then("^user is redirected to pricing page and check the text2 (\\d+)PP$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text2_PP(int arg1) throws Throwable {
+	@Then("^user is redirected to pricing page and check the text2 PP2$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text2_PP2() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		       Thread.sleep(4000);
@@ -150,6 +153,7 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
+		//wait.implictywait(driver);
 		Thread.sleep(2000);
 		js.executeScript("alert('Text $49.99 is present and correct');");
 		Thread.sleep(3000);
@@ -158,8 +162,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 	
-	@Then("^user is redirected to pricing page and check the text3 (\\d+)PP$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text3_PP(int arg1) throws Throwable {
+	@Then("^user is redirected to pricing page and check the text3 PP3$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text3_PP3() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		       Thread.sleep(4000);
@@ -172,6 +176,7 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
+		//wait.implictywait(driver);
 		Thread.sleep(2000);
 		js.executeScript("alert('Text Semi Annual is present and correct');");
 		Thread.sleep(3000);
@@ -180,8 +185,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 	
-	@Then("^user is redirected to pricing page and check the text4 (\\d+)PP$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text4_PP(int arg1) throws Throwable {
+	@Then("^user is redirected to pricing page and check the text4 PP4$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text4_PP4() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		       Thread.sleep(4000);
@@ -194,6 +199,7 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
+		//wait.implictywait(driver);
 		Thread.sleep(2000);
 		js.executeScript("alert('Text $149.99 is present and correct');");
 		Thread.sleep(3000);
@@ -202,8 +208,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 	
-	@Then("^user is redirected to pricing page and check the text5 (\\d+)PP$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text5_PP(int arg1) throws Throwable {
+	@Then("^user is redirected to pricing page and check the text5 PP5$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text5_PP5() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		       Thread.sleep(4000);
@@ -216,6 +222,7 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
+		//wait.implictywait(driver);
 		Thread.sleep(2000);
 		js.executeScript("alert('Text Annual is present and correct');");
 		Thread.sleep(3000);
@@ -224,8 +231,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 	
-	@Then("^user is redirected to pricing page and check the text6 (\\d+)PP$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text6_PP(int arg1) throws Throwable {
+	@Then("^user is redirected to pricing page and check the text6 PP6$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text6_PP6() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		       Thread.sleep(4000);
@@ -238,16 +245,17 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
-		Thread.sleep(2000);
 		js.executeScript("alert('Text $249.99 is present and correct');");
 		Thread.sleep(3000);
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
 		Thread.sleep(5000);
+		//wait.implictywait(driver);
+		Thread.sleep(2000);
 	}
 	
-	@Then("^user is redirected to pricing page and check the text7 (\\d+)PP$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text7_PP(int arg1) throws Throwable {
+	@Then("^user is redirected to pricing page and check the text7 PP7$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text7_PP7() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		       Thread.sleep(4000);
@@ -260,6 +268,7 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
+		//wait.implictywait(driver);
 		Thread.sleep(2000);
 		js.executeScript("alert('Text Team License is present and correct');");
 		Thread.sleep(3000);
@@ -268,8 +277,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(2000);
 	}
 	
-	@Then("^user is redirected to pricing page and check the text8 (\\d+)PP$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text8_PP(int arg1) throws Throwable {
+	@Then("^user is redirected to pricing page and check the text8 PP8$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text8_PP8() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		       Thread.sleep(4000);
@@ -282,6 +291,7 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
+		//wait.implictywait(driver);
 		Thread.sleep(2000);
 		js.executeScript("alert('Text $599.99 is present and correct');");
 		Thread.sleep(3000);
@@ -289,7 +299,6 @@ public class Paypal_Checkout extends SetupClass {
 		//wait.implictywait(driver);
 		Thread.sleep(5000);
 	}
-	
     @Then("^user is redirected to pricing page and choose the plan to pay$")
 	public void user_is_redirected_to_pricing_page_and_choose_the_plan_to_pay() throws Throwable {
 		// choose a plan
