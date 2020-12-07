@@ -128,17 +128,17 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	/*@Then("^user is redirected checkout page$")
+	/@Then("^user is redirected checkout page$")
 	public void user_is_redirected_checkout_page(int arg1) throws Throwable {
 		Thread.sleep(6000);
-    WebElement Continue =  driver.findElement(By.xpath("//*[@id='pg-checkout-shipping-info']/div[1]/div/div/div/div[2]/button"));
-	js.executeScript("arguments[0].scrollIntoView();",Continue);
-		Thread.sleep(1000);
-		Continue.click();
-	}*/
+    //WebElement Continue =  driver.findElement(By.xpath("//*[@id='pg-checkout-shipping-info']/div[1]/div/div/div/div[2]/button"));
+	//js.executeScript("arguments[0].scrollIntoView();",Continue);
+		//Thread.sleep(1000);
+		//Continue.click();
+	}
 
 	@Then("^user proceed to pay with (\\d+)paypal (\\d+)paypal$")
-	public void user_proceed_to_pay_with_paypal_paypal(int arg1, int arg2) throws InterruptedException {
+	public void user_proceed_to_pay_with_paypal_paypal(int arg1, int arg2) throws Throwable {
 	
 		Thread.sleep(1400);
 		
