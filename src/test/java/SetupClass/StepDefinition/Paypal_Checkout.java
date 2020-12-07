@@ -113,7 +113,181 @@ public class Paypal_Checkout extends SetupClass {
 		register_btn.click();
 		 Thread.sleep(5000);
 	}
-
+   @Then("^user is redirected to pricing page and check the text1 (\\d+)PP$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text1_PP(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "Monthly";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Monthly";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Monthly is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text2 (\\d+)PP$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text2_PP(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "$49.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$49.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $49.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text3 (\\d+)PP$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text3_PP(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "Semi Annual";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Semi Annual";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Semi Annual is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text4 (\\d+)PP$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text4_PP(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "$149.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$149.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $149.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text5 (\\d+)PP$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text5_PP(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "Annual";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Annual";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Annual is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text6 (\\d+)PP$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text6_PP(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "$249.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$249.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $249.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text7 (\\d+)PP$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text7_PP(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "Team License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Team License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Team License is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(2000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text8 (\\d+)PP$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text8_PP(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "$599.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$599.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $599.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
 	
     @Then("^user is redirected to pricing page and choose the plan to pay$")
 	public void user_is_redirected_to_pricing_page_and_choose_the_plan_to_pay() throws Throwable {
