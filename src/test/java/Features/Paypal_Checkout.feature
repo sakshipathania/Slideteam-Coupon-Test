@@ -3,6 +3,14 @@ Feature:  Paypal Checkout
 Scenario: Test paypal checkout
 
 Given user is already on Website Home Page
+Then user is redirected to pricing page and check the text1 PP
+Then user is redirected to pricing page and check the text2 PP
+Then user is redirected to pricing page and check the text3 PP
+Then user is redirected to pricing page and check the text4 PP
+Then user is redirected to pricing page and check the text5 PP
+Then user is redirected to pricing page and check the text6 PP
+Then user is redirected to pricing page and check the text7 PP
+Then user is redirected to pricing page and check the text8 PP
 Then user is redirected to pricing page and choose the plan to pay
 Then user is redirected checkout page
 Then user proceed to pay with paypal pp
