@@ -4,9 +4,9 @@
     "elements": [
       {
         "line": 3,
-        "name": "Test Sign up with Incorrect Data",
+        "name": "2.Email_Sign_up_Correct_data",
         "description": "",
-        "id": "sign-up-with-incorrect-data;test-sign-up-with-incorrect-data",
+        "id": "Sign up with correct data;Test Sign up with correct Data",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -18,7 +18,7 @@
             "line": 5,
             "name": "user is already on Website Home Page i",
             "match": {
-              "location": "Email_Sign_Up_Incorrect_Data_1.user_is_already_on_Website_Home_Page_i()"
+              "location": "2.Email_Sign_up_Correct_data.user_is_already_on_Website_Home_Page_i()"
             },
             "keyword": "Given "
           },
@@ -28,9 +28,9 @@
               "status": "passed"
             },
             "line": 6,
-            "name": "user navigates to sign up page i",
+            "name": "user is already on Website Home Page ii",
             "match": {
-              "location": "Email_Sign_Up_Incorrect_Data_1.user_navigates_to_sign_up_page_i()"
+              "location": "2.Email_Sign_up_Correct_data.user is already on Website Home Page ii()"
             },
             "keyword": "Then "
           },
@@ -40,96 +40,22 @@
               "status": "passed"
             },
             "line": 7,
-            "name": "user enter incorrect details to sign up i",
+            "name": "user navigates to sign up page ii",
             "match": {
-              "location": "Email_Sign_Up_Incorrect_Data_1.user_enter_incorrect_details_to_sign_up_i()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 27347953800,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "error message is displayed i",
-            "match": {
-              "location": "Email_Sign_Up_Incorrect_Data_1.error_message_is_displayed_i()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 6113048300,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user enter valid name i",
-            "match": {
-              "location": "Email_Sign_Up_Incorrect_Data_1.user_enter_valid_name_i()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 8179634700,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user enter valid email i",
-            "match": {
-              "location": "Email_Sign_Up_Incorrect_Data_1.user_enter_valid_email_i()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 12180261800,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user enter valid password and confirm password i",
-            "match": {
-              "location": "Email_Sign_Up_Incorrect_Data_1.user_enter_valid_password_and_confirm_password_i()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 6105906200,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "user enter valid captcha i",
-            "match": {
-              "location": "Email_Sign_Up_Incorrect_Data_1.user_enter_valid_captcha_i()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 18467505700,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "user click on register button to complete sign up i",
-            "match": {
-              "location": "Email_Sign_Up_Incorrect_Data_1.user_click_on_register_button_to_complete_sign_up_i()"
-            },
-            "keyword": "Then "
-          }
+              "location": "2.Email_Sign_up_Correct_data.user navigates to sign up page ii()"
+            }
         ]
       }
     ],
-    "name": "Sign up with incorrect data",
+    "name": "CO_Checkout",
     "description": "",
-    "id": "sign-up-with-incorrect-data",
+    "id": "2CO Checkout",
     "keyword": "Feature",
-    "uri": "src/test/java/Features/1.Email_Sign_up_Incorrect_data.feature",
+    "uri": "src/test/java/Features/2CO Checkout.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@Sign_up_Incorrect_data"
+        "name": "@CO_Checkout"
       }
     ]
   },
@@ -138,9 +64,9 @@
     "elements": [
       {
         "line": 3,
-        "name": "Test Sign up with Incorrect Data",
+        "name": "Test 2CO checkout",
         "description": "",
-        "id": "sign-up-with-incorrect-data;test-sign-up-with-incorrect-data",
+        "id": "CO_Checkout;Test 2CO checkout",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
