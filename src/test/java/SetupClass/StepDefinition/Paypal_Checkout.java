@@ -357,23 +357,23 @@ public class Paypal_Checkout extends SetupClass {
 	public void paypal_popup_appears_and_user_navigates_back_to_my_account_pp() throws Throwable {
 	        //WebDriverWait wait = new WebDriverWait(driver,100);
 		  // Maximize Window
-		  driver.manage().window().maximize();
+		//  driver.manage().window().maximize();
 		
 		  // Store the CurrentWindow for future reference
 		 // String handle = " ";
-		  String currentWindow = driver.getWindowHandle();
-		  String popupWindowHandle = null;
+		//  String currentWindow = driver.getWindowHandle();
+		//  String popupWindowHandle = null;
 		   
 		  // Switch To Popup Window
 		  
-		  for(String handle : driver.getWindowHandles())
+		/*  for(String handle : driver.getWindowHandles())
 		  {
 		   if(!handle.equals(currentWindow)){
 		    
 		    popupWindowHandle = handle;
 		    driver.switchTo().window(popupWindowHandle);
 		   }
-		  }
+		  }*/
 		  
 		  
 		  
@@ -382,16 +382,17 @@ public class Paypal_Checkout extends SetupClass {
 			Thread.sleep(3000);
 		    System.out.println("Title of the Page is --> "+pp_page_title);
 		    
-		 // place order button 
+		/* // place order button 
 			 WebElement cancel_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(.,'Cancel and return to Slideteam Pte. Ltd.')])[2]")));
 		js.executeScript("arguments[0].scrollIntoView();",cancel_order_btn);		
 		Thread.sleep(2000);
 			    cancel_order_btn.click();
-				Thread.sleep(5000);
+				Thread.sleep(5000);*/
+		
 
 				 // Switch To Default Window
-				  
-				  driver.switchTo().window(currentWindow);
+				  driver.get("https://www.slidegeeks.com/component/pago/checkout");
+				 // driver.switchTo().window(currentWindow);
 		    
 	}
 
