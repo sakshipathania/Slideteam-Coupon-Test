@@ -9,8 +9,6 @@ Then user is redirected to pricing page and check the text3 2CO
 Then user is redirected to pricing page and check the text4 2CO
 Then user is redirected to pricing page and check the text5 2CO
 Then user is redirected to pricing page and check the text6 2CO
-Then user is redirected to pricing page and check the text7 2CO
-Then user is redirected to pricing page and check the text8 2CO
 Then user is redirected to pricing page and check the text9 2CO
 Then user is redirected to pricing page and check the text10 2CO
 Then user is redirected to pricing page and check the text11 2CO
