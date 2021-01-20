@@ -556,7 +556,7 @@ public class CO_Checkout extends SetupClass {
 		//driver.get("https://www.slidegeeks.com/subscriptions");
 		Thread.sleep(3000);
 		//js.executeScript("window.scrollBy(0,1000)");
-		 WebElement Subscribe_btn  =  driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/section[2]/div/div/div[2]/div/div/div/div[1]/div/form/div[2]/div/span/button"));
+		 WebElement Subscribe_btn  =  driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[1]/div/div[3]/div[3]/span/form/span/button"));
 		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn);
 			Thread.sleep(2000);
 		    Subscribe_btn.click();
