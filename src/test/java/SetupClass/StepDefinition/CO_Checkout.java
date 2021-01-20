@@ -299,6 +299,256 @@ public class CO_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 	
+	@Then("^user is redirected to pricing page and check the text9 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text9_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[2]")));
+				Thread.sleep(2000);
+		Business_Team.click();
+		Thread.sleep(3000);
+		
+		String actualTitle = "Annual 4 User License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Annual 4 User License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Annual 4 User License is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text10 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text10_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[2]")));
+				Thread.sleep(2000);
+		Business_Team.click();
+		Thread.sleep(3000);
+	
+		String actualTitle = "$599.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$599.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $599.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+		
+          @Then("^user is redirected to pricing page and check the text11 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text11_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+        WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[2]")));
+				Thread.sleep(2000);
+		Business_Team.click();
+		Thread.sleep(3000);
+	
+		String actualTitle = "Annual 20 User License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Annual 20 User License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Annual 20 User License is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+		
+	@Then("^user is redirected to pricing page and check the text12 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text12_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[2]")));
+				Thread.sleep(2000);
+		Business_Team.click();
+		Thread.sleep(3000);
+	
+		String actualTitle = "$1599.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$1599.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $1599.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+    @Then("^user is redirected to pricing page and check the text13 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text13_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[2]")));
+				Thread.sleep(2000);
+		Business_Team.click();
+		Thread.sleep(3000);
+	
+		String actualTitle = "Annual Company Wide Unlimited User License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Annual Company Wide Unlimited User License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Annual Company Wide Unlimited User License is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text14 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text14_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[2]")));
+				Thread.sleep(2000);
+		Business_Team.click();
+		Thread.sleep(3000);
+	
+		String actualTitle = "$2999.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$2999.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $2999.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text15 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text15_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[3]")));
+				Thread.sleep(2000);
+		Education.click();
+		Thread.sleep(3000);
+	
+		String actualTitle = "Annual 15 User Education License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Annual 15 User Education License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Annual 15 User Education License is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text16 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text16_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[3]")));
+				Thread.sleep(2000);
+		Education.click();
+		Thread.sleep(3000);
+	
+		String actualTitle = "$999.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$999.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $999.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text17 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text17_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[3]")));
+				Thread.sleep(2000);
+		Education.click();
+		Thread.sleep(3000);
+	
+		String actualTitle = "Annual UNLIMITED User Institute Wide License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Annual UNLIMITED User Institute Wide License";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Annual UNLIMITED User Institute Wide Licenseis present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text18 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text18_CO(int arg1) throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[3]")));
+				Thread.sleep(2000);
+		Education.click();
+		Thread.sleep(3000);
+	
+		String actualTitle = "$1999.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$1999.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $1999.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
 	
     @Then("^user is redirected to pricing page and choose a plan to pay (\\d+)CO$")
 	public void user_is_redirected_to_pricing_page_and_choose_a_plan_to_pay_CO(int arg1) throws Throwable {
