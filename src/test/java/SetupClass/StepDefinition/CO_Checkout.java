@@ -623,11 +623,11 @@ public class CO_Checkout extends SetupClass {
 			Thread.sleep(5000);
 		} catch (NoSuchElementException popup) {
 		}
-		String co_page_title=driver.getTitle();
+		String co_page_title1=driver.getTitle();
 		Thread.sleep(3000);
 	    System.out.println("Title of the Page is --> "+co_page_title);
 	    
-	    String page_title="2Checkout";
+	    String page_title1="2Checkout";
 	    
 	    if(page_title.equalsIgnoreCase(co_page_title))
 	    {
@@ -639,10 +639,10 @@ public class CO_Checkout extends SetupClass {
 	    	System.out.println("user is on the wrong page");
 	    	log.info("USER IS ON THE WRONG PAGE");
 	    }
-		String actualTitle = "$299.99";
+		String actualTitle1 = "$299.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
-		String expectedTitle = "$299.99";
+		String expectedTitle1 = "$299.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
