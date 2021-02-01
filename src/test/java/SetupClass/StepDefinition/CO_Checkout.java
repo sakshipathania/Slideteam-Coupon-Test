@@ -560,7 +560,7 @@ public class CO_Checkout extends SetupClass {
 	}
 
 	@Then("^2CO page appears and user navigates back to my account (\\d+)CO$")
-	public void paypal_popup_appears_and_user_navigates_back_to_my_account_CO(int arg1) throws Throwable {
+	public void 2CO_page_appears_and_user_navigates_back_to_my_account_CO(int arg1) throws Throwable {
 	    String co_page_title=driver.getTitle();
 		Thread.sleep(3000);
 	    System.out.println("Title of the Page is --> "+co_page_title);
