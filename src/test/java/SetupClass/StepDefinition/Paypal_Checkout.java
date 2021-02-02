@@ -630,11 +630,7 @@ public class Paypal_Checkout extends SetupClass {
 			Thread.sleep(2000);
 		    Subscribe_btn1.click();
 			Thread.sleep(6000);
-		 try {
-		Thread.sleep(1400);
-			 
-			 Thread.sleep(1400);
-		
+	
 		    try
 		{
 			WebElement cp_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(1) > label > i")));
