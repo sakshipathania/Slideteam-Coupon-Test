@@ -577,28 +577,7 @@ public class Paypal_Checkout extends SetupClass {
 
 	@Then("^paypal popup appears and user navigates back to my account pp$")
 	public void paypal_popup_appears_and_user_navigates_back_to_my_account_pp() throws Throwable {
-	        //WebDriverWait wait = new WebDriverWait(driver,100);
-		  // Maximize Window
-		//  driver.manage().window().maximize();
-		
-		  // Store the CurrentWindow for future reference
-		 // String handle = " ";
-		//  String currentWindow = driver.getWindowHandle();
-		//  String popupWindowHandle = null;
-		   
-		  // Switch To Popup Window
-		  
-		/*  for(String handle : driver.getWindowHandles())
-		  {
-		   if(!handle.equals(currentWindow)){
-		    
-		    popupWindowHandle = handle;
-		    driver.switchTo().window(popupWindowHandle);
-		   }
-		  }*/
-		  
-		  
-		  
+	         
 		// page title
 		  String pp_page_title=driver.getTitle();
 			Thread.sleep(3000);
@@ -611,7 +590,7 @@ public class Paypal_Checkout extends SetupClass {
 			    cancel_order_btn.click();
 				Thread.sleep(5000);*/
 		if(WebElement PP_Email = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/input")).isDisplayed());
-		   
+		{
                          Thread.sleep(2000);
 		   PP_Email.sendkeys("tatvashardul-buyer@gmail.com");
 		   Thread.sleep(2000);
@@ -630,9 +609,15 @@ public class Paypal_Checkout extends SetupClass {
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
 		Thread.sleep(5000);
+		driver.get("https://www.slidegeeks.com/component/pago/checkout");
+		Thread.sleep(2000);	
+		}
+		else {
 		Thread.sleep(3000);
 		 driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		Thread.sleep(2000);
+		}
+		thread.sleep(2000);
 		 driver.get("https://www.slidegeeks.com/subscriptions");
 		Thread.sleep(2000);
 		   WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[3]")));
@@ -686,7 +671,7 @@ public class Paypal_Checkout extends SetupClass {
 			    cancel_order_btn.click();
 				Thread.sleep(5000);*/
 		if(WebElement PP_Email = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/input")).isDisplayed());
-		   
+			 {
                          Thread.sleep(2000);
 		   PP_Email.sendkeys("tatvashardul-buyer@gmail.com");
 		   Thread.sleep(2000);
@@ -708,7 +693,9 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(3000);
 		 driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		Thread.sleep(2000);
-		 driver.get("https://www.slidegeeks.com/subscriptions");
+			 }
+			 else {
+		 driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		Thread.sleep(2000);
 				 // Switch To Default Window
 				  driver.get("https://www.slidegeeks.com/component/pago/checkout");
