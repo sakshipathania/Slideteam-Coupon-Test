@@ -595,7 +595,7 @@ public class Paypal_Checkout extends SetupClass {
                          Thread.sleep(2000);
 		   PP_Email.sendKeys("tatvashardul-buyer@gmail.com");
 		   Thread.sleep(2000);
-		   WebElement Next1 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button")).click();
+		   WebElement Next_1 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button")).click();
 							 Thread.sleep(3000);
 		   String actualTitle = "$1,599.99";
 		Thread.sleep(1000);
@@ -657,7 +657,7 @@ public class Paypal_Checkout extends SetupClass {
 		}
 		         Thread.sleep(3000);
 			 // page title
-		  String pp_page_title=driver.getTitle();
+		  String pp_page_title1=driver.getTitle();
 			Thread.sleep(3000);
 		    System.out.println("Title of the Page is --> "+pp_page_title);
 		    
@@ -673,7 +673,7 @@ public class Paypal_Checkout extends SetupClass {
                          Thread.sleep(2000);
 		   PP_Email.sendKeys("tatvashardul-buyer@gmail.com");
 		   Thread.sleep(2000);
-		   WebElement Next1 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button")).click();
+		   WebElement Next_2 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button")).click();
 							 Thread.sleep(3000);
 		   String actualTitle = "$1,999.99";
 		Thread.sleep(1000);
