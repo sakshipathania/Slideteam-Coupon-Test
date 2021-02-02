@@ -595,8 +595,10 @@ public class Paypal_Checkout extends SetupClass {
                          Thread.sleep(2000);
 		   PP_Email.sendKeys("tatvashardul-buyer@gmail.com");
 		   Thread.sleep(2000);
-		   WebElement Next_1 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button")).click();
+		   WebElement Next_1 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button"));
 							 Thread.sleep(3000);
+		 Next_1.click();
+		  Thread.sleep(3000);
 		   String actualTitle = "$1,599.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
