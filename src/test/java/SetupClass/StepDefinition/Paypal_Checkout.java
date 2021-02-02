@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.Keys;
 
 import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
@@ -592,7 +593,7 @@ public class Paypal_Checkout extends SetupClass {
 		if(driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/input")).isDisplayed())
 		{  WebElement PP_Email = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/input"));
                          Thread.sleep(2000);
-		   PP_Email.sendkeys("tatvashardul-buyer@gmail.com");
+		   PP_Email.sendKeys("tatvashardul-buyer@gmail.com");
 		   Thread.sleep(2000);
 		   WebElement Next1 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button")).click();
 							 Thread.sleep(3000);
@@ -617,7 +618,7 @@ public class Paypal_Checkout extends SetupClass {
 		 driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		Thread.sleep(2000);
 		}
-		thread.sleep(2000);
+		Thread.sleep(2000);
 		 driver.get("https://www.slidegeeks.com/subscriptions");
 		Thread.sleep(2000);
 		   WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div/button[3]")));
@@ -670,7 +671,7 @@ public class Paypal_Checkout extends SetupClass {
 			 {
 			WebElement PP_Email = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/input"));
                          Thread.sleep(2000);
-		   PP_Email.sendkeys("tatvashardul-buyer@gmail.com");
+		   PP_Email.sendKeys("tatvashardul-buyer@gmail.com");
 		   Thread.sleep(2000);
 		   WebElement Next1 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button")).click();
 							 Thread.sleep(3000);
