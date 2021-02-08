@@ -704,7 +704,7 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(2000);
 				  driver.get("https://www.slidegeeks.com/component/pago/checkout");
 				 // driver.switchTo().window(currentWindow);
-			 }
+			 
 	}
 
 
