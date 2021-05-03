@@ -653,13 +653,13 @@ public class Stripe_Checkout extends SetupClass {
 	    	log.info("USER IS ON THE WRONG PAGE");
 	    }	
 		Thread.sleep(3000);
-		 WebElement Stripe_email = driver.findElement(By.cssSelector("#email"));
+		 WebElement Stripe_email1 = driver.findElement(By.cssSelector("#email"));
 		Thread.sleep(2000);
-		 Stripe_email.sendKeys("slidetech.qa@gmail.com");
+		 Stripe_email1.sendKeys("slidetech.qa@gmail.com");
 		Thread.sleep(2000);
-		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
+		 WebElement Stripe_back1 = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
 		Thread.sleep(2000);
-			Stripe_back.click();
+			Stripe_back1.click();
 		Thread.sleep(5000);
 		//driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
