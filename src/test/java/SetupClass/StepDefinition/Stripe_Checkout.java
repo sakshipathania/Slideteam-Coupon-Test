@@ -19,7 +19,7 @@ import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class CO_Checkout extends SetupClass {
+public class Stripe_Checkout extends SetupClass {
 	
 	WebDriverWait wait = new WebDriverWait(driver,50);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -536,7 +536,7 @@ public class CO_Checkout extends SetupClass {
 		 try {
 		Thread.sleep(1400);
 		// select 2co option
-		WebElement co_btn  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label > div > p")));
+		WebElement co_btn  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(1) > label")));
 		Thread.sleep(2000);
 	         co_btn.click();
 		Thread.sleep(5000);
@@ -561,22 +561,22 @@ public class CO_Checkout extends SetupClass {
 
 	@Then("^CO page appears and user navigates back to my account (\\d+)CO$")
 	public void CO_page_appears_and_user_navigates_back_to_my_account_CO(int arg1) throws Throwable {
-	    String co_page_title=driver.getTitle();
+	    String stripe_page_title=driver.getTitle();
 		Thread.sleep(3000);
-	    System.out.println("Title of the Page is --> "+co_page_title);
+	    System.out.println("Title of the Page is --> "+stripe_page_title);
 	    
-	    String page_title="2Checkout";
+	    String page_title="https://checkout.stripe.com/";
 	    
-	    if(page_title.equalsIgnoreCase(co_page_title))
+	    if(page_title.equalsIgnoreCase(stripe_page_title))
 	    {
-	    	System.out.println(" user is on the 2checkout page");
-	    	log.info("USER IS ON THE 2CHECKOUT PAGE");
+	    	System.out.println(" user is on the Stripe page");
+	    	log.info("USER IS ON THE STRIPE PAGE");
 	    }
 	    else
 	    {
 	    	System.out.println("user is on the wrong page");
 	    	log.info("USER IS ON THE WRONG PAGE");
-	    }
+	    }	
 		String actualTitle = "$149.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
@@ -604,7 +604,7 @@ public class CO_Checkout extends SetupClass {
 		 try {
 		Thread.sleep(1400);
 		// select 2co option
-		WebElement co_btn1  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label > div > p")));
+		WebElement co_btn1  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(1) > label")));
 		Thread.sleep(2000);
 	         co_btn1.click();
 		Thread.sleep(5000);
@@ -623,22 +623,22 @@ public class CO_Checkout extends SetupClass {
 			Thread.sleep(5000);
 		} catch (NoSuchElementException popup) {
 		}
-		String co_page_title1=driver.getTitle();
+		 String stripe_page_title=driver.getTitle();
 		Thread.sleep(3000);
-	    System.out.println("Title of the Page is --> "+co_page_title);
+	    System.out.println("Title of the Page is --> "+stripe_page_title);
 	    
-	    String page_title1="2Checkout";
+	    String page_title="https://checkout.stripe.com/";
 	    
-	    if(page_title.equalsIgnoreCase(co_page_title))
+	    if(page_title.equalsIgnoreCase(stripe_page_title))
 	    {
-	    	System.out.println(" user is on the 2checkout page");
-	    	log.info("USER IS ON THE 2CHECKOUT PAGE");
+	    	System.out.println(" user is on the Stripe page");
+	    	log.info("USER IS ON THE STRIPE PAGE");
 	    }
 	    else
 	    {
 	    	System.out.println("user is on the wrong page");
 	    	log.info("USER IS ON THE WRONG PAGE");
-	    }
+	    }	
 		String actualTitle1 = "$299.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
