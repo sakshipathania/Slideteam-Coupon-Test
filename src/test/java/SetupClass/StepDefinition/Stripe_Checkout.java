@@ -577,6 +577,19 @@ public class Stripe_Checkout extends SetupClass {
 	    	System.out.println("user is on the wrong page");
 	    	log.info("USER IS ON THE WRONG PAGE");
 	    }	
+		
+		Thread.sleep(3000);
+		 WebElement Stripe_email = driver.findElement(By.cssSelector("#email"));
+		Thread.sleep(2000);
+		 Stripe_email.sendKeys("slidetech.qa@gmail.com");
+		Thread.sleep(2000);
+		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
+		Thread.sleep(2000);
+			Stripe_back.click();
+		Thread.sleep(5000);
+		//driver.get("https://www.slidegeeks.com/component/pago/checkout");
+		//Thread.sleep(2000);
+		
 		String actualTitle = "$149.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
@@ -639,6 +652,18 @@ public class Stripe_Checkout extends SetupClass {
 	    	System.out.println("user is on the wrong page");
 	    	log.info("USER IS ON THE WRONG PAGE");
 	    }	
+		Thread.sleep(3000);
+		 WebElement Stripe_email = driver.findElement(By.cssSelector("#email"));
+		Thread.sleep(2000);
+		 Stripe_email.sendKeys("slidetech.qa@gmail.com");
+		Thread.sleep(2000);
+		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
+		Thread.sleep(2000);
+			Stripe_back.click();
+		Thread.sleep(5000);
+		//driver.get("https://www.slidegeeks.com/component/pago/checkout");
+		//Thread.sleep(2000);
+		
 		String actualTitle1 = "$299.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
