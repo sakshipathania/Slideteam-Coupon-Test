@@ -1,6 +1,6 @@
-@CO_Checkout
-Feature:  2CO Checkout
-Scenario: Test 2CO checkout
+@Stripe_Checkout
+Feature:  Stripe Checkout
+Scenario: Test Stripe checkout
 
 Given user is already on Website Home Page CO
 Then user is redirected to pricing page and check the text1 2CO
