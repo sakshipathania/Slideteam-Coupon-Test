@@ -623,13 +623,13 @@ public class Stripe_Checkout extends SetupClass {
 			Thread.sleep(5000);
 		} catch (NoSuchElementException popup) {
 		}
-		 String stripe_page_title=driver.getTitle();
+		 String stripe_page_title1=driver.getTitle();
 		Thread.sleep(3000);
-	    System.out.println("Title of the Page is --> "+stripe_page_title);
+	    System.out.println("Title of the Page is --> "+stripe_page_title1);
 	    
 	    String page_title="https://checkout.stripe.com/";
 	    
-	    if(page_title.equalsIgnoreCase(stripe_page_title))
+	    if(page_title.equalsIgnoreCase(stripe_page_title1))
 	    {
 	    	System.out.println(" user is on the Stripe page");
 	    	log.info("USER IS ON THE STRIPE PAGE");
