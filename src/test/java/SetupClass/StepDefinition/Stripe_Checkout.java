@@ -627,9 +627,9 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(3000);
 	    System.out.println("Title of the Page is --> "+stripe_page_title1);
 	    
-	    String page_title="https://checkout.stripe.com/";
+	    String page_title1="https://checkout.stripe.com/";
 	    
-	    if(page_title.equalsIgnoreCase(stripe_page_title1))
+	    if(page_title1.equalsIgnoreCase(stripe_page_title1))
 	    {
 	    	System.out.println(" user is on the Stripe page");
 	    	log.info("USER IS ON THE STRIPE PAGE");
