@@ -59,8 +59,18 @@ public class Coupon extends SetupClass {
 				}
 	    
 		Thread.sleep(3000);
-		driver.get("https://www.slidegeeks.com/register");
+		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
 		Thread.sleep(3000);
+		Join_now.click();
+		Thread.sleep(5000);
+		
+		WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(1) > div > div > div.btn-wrapper.create_accbtn > a")));
+		Thread.sleep(3000);
+		create_account.click();
+		Thread.sleep(2000);
+		//driver.get("https://www.slidegeeks.com/register");
+		Thread.sleep(3000);
+		
 		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_name1")));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
