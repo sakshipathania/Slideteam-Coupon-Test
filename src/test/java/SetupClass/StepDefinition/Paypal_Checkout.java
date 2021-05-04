@@ -528,7 +528,7 @@ public class Paypal_Checkout extends SetupClass {
 		Business_Team.click();
 		Thread.sleep(4000);
 		//js.executeScript("window.scrollBy(0,1000)");
-		 WebElement Subscribe_btn  =  driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/span/form/span/button"));
+		 WebElement Subscribe_btn  =  driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[2]/div/div[4]/div[3]/span/form/span/button"));
 		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn);
 			Thread.sleep(2000);
 		    Subscribe_btn.click();
@@ -560,6 +560,33 @@ public class Paypal_Checkout extends SetupClass {
 		catch (NoSuchElementException popup) {
 			// TODO: handle exception
 		}
+		
+		Thread.sleep(3000);
+		//Apply coupon
+
+		WebElement Coupon= driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div:nth-child(1) > div.checkout-box-container.payment-content > form:nth-child(2) > div:nth-child(3) > div.form-group.custom-checkbox > label"));
+		Thread.sleep(3000);
+		Coupon.click();
+		Thread.sleep(3000);
+		 WebElement Add_Coupon= driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div[3]/div[1]/div[1]/form[2]/div[2]/div[2]/input"));
+		Thread.sleep(3000);
+		Add_Coupon.sendKeys("5OFF");
+		Thread.sleep(3000);
+		
+		
+		WebElement Value_after_coupon= driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div[3]/div[2]/div/div/table/tbody/tr[4]/td[2]/strong/em"));
+		
+	      String expected = "$2849.99";
+              String actual = Value_after_coupon.getText();
+              System.out.println(actual);
+
+              if(expected.equals(actual)){
+              System.out.println("Coupon applied Successfully");
+              }
+           else {
+            System.out.println("Coupon Error");
+        }
+		
 		
 		Thread.sleep(1000);
 		   try {
