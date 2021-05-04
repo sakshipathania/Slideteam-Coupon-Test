@@ -588,7 +588,7 @@ public class Stripe_Checkout extends SetupClass {
 		//driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
 		
-		String actualTitle = "$149.99";
+		/*String actualTitle = "$149.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		String expectedTitle = "$149.99";
@@ -600,17 +600,17 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(3000);
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
 		Thread.sleep(2000);
 			Stripe_back.click();
 		Thread.sleep(3000);
-		 driver.get("https://www.slidegeeks.com/component/pago/checkout");
-		Thread.sleep(2000);
-		 driver.get("https://www.slidegeeks.com/subscriptions");
-		Thread.sleep(2000);
+		// driver.get("https://www.slidegeeks.com/component/pago/checkout");
+		//Thread.sleep(2000);
+		 //driver.get("https://www.slidegeeks.com/subscriptions");
+		//Thread.sleep(2000);
 		//js.executeScript("window.scrollBy(0,1000)");
-		 WebElement Subscribe_btn1  =  driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[1]/div/div[5]/div[3]/span/form/span/button"));
+		 /*WebElement Subscribe_btn1  =  driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[1]/div/div[5]/div[3]/span/form/span/button"));
 		js.executeScript("arguments[0].scrollIntoView();",Subscribe_btn1);
 			Thread.sleep(2000);
 		    Subscribe_btn1.click();
@@ -663,7 +663,7 @@ public class Stripe_Checkout extends SetupClass {
 		//driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
 		
-		String actualTitle1 = "$299.99";
+		/*String actualTitle1 = "$299.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		String expectedTitle1 = "$299.99";
@@ -675,10 +675,10 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(3000);
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
-		Thread.sleep(5000);
-		 WebElement Stripe_back1 = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
-		Thread.sleep(2000);
-			Stripe_back1.click();
+		Thread.sleep(5000);*/
+		// WebElement Stripe_back1 = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
+		//Thread.sleep(2000);
+			//Stripe_back1.click();
 		
 		
 	}
