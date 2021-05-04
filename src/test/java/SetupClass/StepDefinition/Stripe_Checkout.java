@@ -583,6 +583,8 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(2000);
 		 Stripe_email.sendKeys("slidetech.qa@gmail.com");
 		Thread.sleep(2000);
+		Stripe_email.clear();
+		Thread.sleep(2000);
 		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
 		Thread.sleep(2000);
 			Stripe_back.click();
