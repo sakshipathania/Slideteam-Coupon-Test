@@ -128,7 +128,39 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		Remove_Coupon.click();
 		Thread.sleep(3000);
 		
-							
+		//Checkout
+		 WebElement place_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div.checkout-box-wrapper.checkout-order > div > div > table > tbody > tr:nth-child(4) > td:nth-child(1) > button.btn.primary-btn.pg-button.pg-checkout-continue")));
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
+			//js.executeScript("arguments[0].click();", place_order_btn);
+			Thread.sleep(2000);
+		    place_order_btn.click();
+			Thread.sleep(5000);
+		
+		 String stripe_page_title=driver.getTitle();
+		Thread.sleep(3000);
+	    System.out.println("Title of the Page is --> "+stripe_page_title);
+	    
+	    String page_title="https://checkout.stripe.com/";
+	    
+	    if(page_title.equalsIgnoreCase(stripe_page_title))
+	    {
+	    	System.out.println(" user is on the Stripe page");
+	    	log.info("USER IS ON THE STRIPE PAGE");
+	    }
+	    else
+	    {
+	    	System.out.println("user is on the wrong page");
+	    	log.info("USER IS ON THE WRONG PAGE");
+	    }	
+		
+		Thread.sleep(3000);
+		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
+		Thread.sleep(2000);
+			Stripe_back.click();
+		Thread.sleep(5000);
+					
+		//Signout
 		WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
 		Thread.sleep(3000);
 		Signout.click();
