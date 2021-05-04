@@ -561,7 +561,7 @@ public class Stripe_Checkout extends SetupClass {
 
 	@Then("^CO page appears and user navigates back to my account (\\d+)CO$")
 	public void CO_page_appears_and_user_navigates_back_to_my_account_CO(int arg1) throws Throwable {
-	    String stripe_page_title=driver.getTitle();
+	  String stripe_page_title=driver.getTitle();
 		Thread.sleep(3000);
 	    System.out.println("Title of the Page is --> "+stripe_page_title);
 	    
@@ -583,13 +583,11 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(2000);
 		 Stripe_email.sendKeys("slidetech.qa@gmail.com");
 		Thread.sleep(2000);
-		Stripe_email.clear();
-		Thread.sleep(2000);
 		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
 		Thread.sleep(2000);
 			Stripe_back.click();
-		Thread.sleep(3000);
-		
+		Thread.sleep(5000);
+		driver.switchTo().alert().accept();
 		//driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
 		
