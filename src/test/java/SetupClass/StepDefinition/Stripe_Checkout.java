@@ -583,9 +583,7 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(2000);
 		 Stripe_email.sendKeys("slidetech.qa@gmail.com");
 		Thread.sleep(2000);
-		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
-		Thread.sleep(2000);
-			Stripe_back.click();
+		 
 		Thread.sleep(5000);
 		//driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
@@ -603,6 +601,9 @@ public class Stripe_Checkout extends SetupClass {
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
 		Thread.sleep(5000);
+		WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
+		Thread.sleep(2000);
+			Stripe_back.click();
 		Thread.sleep(3000);
 		 driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		Thread.sleep(2000);
@@ -657,9 +658,7 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(2000);
 		 Stripe_email1.sendKeys("slidetech.qa@gmail.com");
 		Thread.sleep(2000);
-		 WebElement Stripe_back1 = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
-		Thread.sleep(2000);
-			Stripe_back1.click();
+		
 		Thread.sleep(5000);
 		//driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
@@ -677,7 +676,9 @@ public class Stripe_Checkout extends SetupClass {
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
 		Thread.sleep(5000);
-		
+		 WebElement Stripe_back1 = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
+		Thread.sleep(2000);
+			Stripe_back1.click();
 		
 		
 	}
