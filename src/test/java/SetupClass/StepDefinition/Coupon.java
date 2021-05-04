@@ -168,7 +168,7 @@ public class Coupon extends SetupClass {
 		Add_Coupon.sendKeys("5OFF");
 		Thread.sleep(3000);
 		Thread.sleep(3000);
-		 WebElement Apply_Coupon= driver.findElement(By.xpath("#applyPromoCode"));
+		 WebElement Apply_Coupon= driver.findElement(By.cssSelector("#applyPromoCode"));
 		Thread.sleep(3000);
 		Apply_Coupon.click();
 		Thread.sleep(3000);
@@ -189,7 +189,7 @@ public class Coupon extends SetupClass {
 		Add_Coupon.sendKeys("5OFF");
 		Thread.sleep(3000);
 		Thread.sleep(3000);
-		 WebElement Apply_Coupon1= driver.findElement(By.xpath("#applyPromoCode"));
+		 WebElement Apply_Coupon1= driver.findElement(By.cssSelector("#applyPromoCode"));
 		Thread.sleep(3000);
 		Apply_Coupon1.click();
 		Thread.sleep(3000);
