@@ -121,7 +121,10 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		Thread.sleep(3000);
 		Add_Coupon.sendKeys("5OFF");
 		Thread.sleep(3000);
-		
+		 WebElement Apply_Coupon= driver.findElement(By.xpath("#removePromoCode"));
+		Thread.sleep(3000);
+		Apply_Coupon.click();
+		Thread.sleep(3000);
 		//Remove Coupon
 		 WebElement Remove_Coupon= driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div:nth-child(1) > div.checkout-box-container.payment-content > form:nth-child(2) > div:nth-child(3) > div.form-group.custom-checkbox > label"));
 		Thread.sleep(3000);
