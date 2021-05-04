@@ -57,7 +57,9 @@ public class Coupon extends SetupClass {
 				catch(NoSuchElementException NCP) {
 					
 				}
-	    
+		Thread.sleep(3000);
+	    driver.get("https://www.slidegeeks.com/subscriptions");
+		Thread.sleep(4000);
 		Thread.sleep(3000);
 		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
 		Thread.sleep(3000);
