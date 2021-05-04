@@ -189,9 +189,9 @@ public class Coupon extends SetupClass {
 		Add_Coupon.sendKeys("5OFF");
 		Thread.sleep(3000);
 		Thread.sleep(3000);
-		 WebElement Apply_Coupon= driver.findElement(By.xpath("#applyPromoCode"));
+		 WebElement Apply_Coupon1= driver.findElement(By.xpath("#applyPromoCode"));
 		Thread.sleep(3000);
-		Apply_Coupon.click();
+		Apply_Coupon1.click();
 		Thread.sleep(3000);
     
 		WebElement Value_after_coupon= driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div[3]/div[2]/div/div/table/tbody/tr[4]/td[2]/strong/em"));
