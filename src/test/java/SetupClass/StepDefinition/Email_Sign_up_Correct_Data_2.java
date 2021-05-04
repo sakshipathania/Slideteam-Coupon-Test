@@ -105,6 +105,29 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		js.executeScript("arguments[0].scrollIntoView();",Download);
 		Download.click();
 		Thread.sleep(3000);
+		
+		//Apply Coupon 
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		Thread.sleep(4000);
+		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
+		Thread.sleep(3000);
+		Join_now.click();
+		Thread.sleep(3000);
+		 WebElement Coupon= driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div:nth-child(1) > div.checkout-box-container.payment-content > form:nth-child(2) > div:nth-child(3) > div.form-group.custom-checkbox > label"));
+		Thread.sleep(3000);
+		Coupon.click();
+		Thread.sleep(3000);
+		 WebElement Add_Coupon= driver.findElement("/html/body/div[1]/div[4]/div/div[3]/div[1]/div[1]/form[2]/div[2]/div[2]/input"));
+		Thread.sleep(3000);
+		Add_Coupon.sendkeys("5OFF");
+		Thread.sleep(3000);
+		
+		//Remove Coupon
+		 WebElement Remove_Coupon= driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div:nth-child(1) > div.checkout-box-container.payment-content > form:nth-child(2) > div:nth-child(3) > div.form-group.custom-checkbox > label"));
+		Thread.sleep(3000);
+		Remove_Coupon.click();
+		Thread.sleep(3000);
+		
 							
 		WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
 		Thread.sleep(3000);
