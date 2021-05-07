@@ -255,6 +255,52 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 	
+	@Then("^user is redirected to pricing page and check the text7 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text7_CO() throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "Annual + Custom Design";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "Annual + Custom Design";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		//wait.implictywait(driver);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text Annual + Custom Design is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+	}
+	
+	@Then("^user is redirected to pricing page and check the text8 (\\d+)CO$")
+	public void user_is_redirected_to_pricing_page_and_check_the_text8_CO() throws Throwable {
+		Thread.sleep(7000);
+		driver.get("https://www.slidegeeks.com/subscriptions");
+		       Thread.sleep(4000);
+		
+		Thread.sleep(3000);
+		String actualTitle = "$299.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$299.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		js.executeScript("alert('Text $299.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+		//wait.implictywait(driver);
+		Thread.sleep(2000);
+	}
+	
 	
 	@Then("^user is redirected to pricing page and check the text9 (\\d+)CO$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text9_CO(int arg1) throws Throwable {
