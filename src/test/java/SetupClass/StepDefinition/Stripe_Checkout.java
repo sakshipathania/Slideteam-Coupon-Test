@@ -279,7 +279,7 @@ public class Stripe_Checkout extends SetupClass {
 	}
 	
 	@Then("^user is redirected to pricing page and check the text8 (\\d+)CO$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text8_CO() throws Throwable {
+	public void user_is_redirected_to_pricing_page_and_check_the_text8_CO(int arg1) throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slidegeeks.com/subscriptions");
 		       Thread.sleep(4000);
