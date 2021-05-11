@@ -734,11 +734,29 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(3000);
 	  //  driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
-		
-
-       WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
+	WebElement Account = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
 		Thread.sleep(3000);
-		Signout.click();
+		Account.click();
+                 Thread.sleep(3000);
+	WebElement Delete_Account = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[2]/div/ul/li[6]/a"));
+		Thread.sleep(3000);
+		Delete_Account.click();
+                 Thread.sleep(3000);
+	WebElement Delete_Account_reason = driver.findElement(By.cssSelector("#only-free-download-product"));
+		Thread.sleep(3000);
+		Delete_Account_reason.click();
+                 Thread.sleep(3000);
+	WebElement Delete_Profile = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div/div[3]/button[1]"));
+		Thread.sleep(3000);
+		Delete_Profile.click();
+                 Thread.sleep(3000);
+	WebElement No_Delete = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div/div/div[3]/button[2]"));
+		Thread.sleep(3000);
+		No_Delete.click();
+                 Thread.sleep(3000);
+     //  WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
+	//	Thread.sleep(3000);
+		//Signout.click();
 	
 }
 }
