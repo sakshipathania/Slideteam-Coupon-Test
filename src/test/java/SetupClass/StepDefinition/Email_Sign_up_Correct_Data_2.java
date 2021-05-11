@@ -113,7 +113,7 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		Thread.sleep(3000);
 		Join_now.click();
 		Thread.sleep(3000);
-		 WebElement Coupon= driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div:nth-child(1) > div.checkout-box-container.payment-content > form:nth-child(2) > div:nth-child(3) > div.form-group.custom-checkbox > label"));
+		 WebElement Coupon= driver.findElement(By.cssSelector("#discount-checkbox"));
 		Thread.sleep(3000);
 		Coupon.click();
 		Thread.sleep(3000);
