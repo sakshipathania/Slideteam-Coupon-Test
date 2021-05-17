@@ -172,6 +172,8 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
                  Thread.sleep(3000);
 	WebElement Delete_Account = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[2]/div/ul/li[6]/a"));
 		Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();",Delete_Account);	
+		Thread.sleep(3000);
 		Delete_Account.click();
                  Thread.sleep(3000);
 	WebElement Delete_Account_reason = driver.findElement(By.cssSelector("#only-free-download-product"));
