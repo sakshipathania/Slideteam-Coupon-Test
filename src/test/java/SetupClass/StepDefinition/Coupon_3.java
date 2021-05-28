@@ -180,8 +180,7 @@ public class Coupon_3 extends SetupClass {
 	         Stripe_card.sendKeys("4242424242424242");
 		Thread.sleep(5000);
 		   //  Stripe_card.clear();
-		  } catch( NoSuchElementException popup) { 
-	     }
+		 
                 Thread.sleep(5000);
 		Thread.sleep(3000);
 		//Apply coupon
@@ -228,10 +227,8 @@ public class Coupon_3 extends SetupClass {
 			System.out.println("Please verify your Card details");
 								     Thread.sleep(2000);
 								  
-		} catch (NoSuchElementException popup) {
-		}
-		
 	}
+		
 	@Then("^paypal popup appears and user navigates back to my account pp cciii$")
 	public void paypal_popup_appears_and_user_navigates_back_to_my_account_pp_cciii() throws Throwable {
 	         
