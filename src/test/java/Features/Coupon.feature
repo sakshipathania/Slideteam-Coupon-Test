@@ -1,6 +1,6 @@
 @Coupon
-Feature:  Coupon
-Scenario: Coupon
+Feature:  Apply Remove Apply Coupon
+Scenario: Apply Remove Apply Coupon
 
 Given user is already on Website Home Page cc
 Then user is redirected to pricing page and choose the plan to pay cc
