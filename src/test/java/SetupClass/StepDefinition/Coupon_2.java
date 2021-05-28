@@ -15,7 +15,7 @@ import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class Email_Sign_up_Correct_Data_2 extends SetupClass {
+public class Coupon_2 extends SetupClass {
 	
 	WebDriverWait wait = new WebDriverWait(driver,50);
          JavascriptExecutor js = (JavascriptExecutor) driver;
