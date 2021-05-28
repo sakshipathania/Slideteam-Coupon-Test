@@ -181,8 +181,7 @@ public class Coupon extends SetupClass {
 	         Stripe_card.sendKeys("4242424242424242");
 		Thread.sleep(5000);
 		   //  Stripe_card.clear();
-		  } catch( NoSuchElementException popup) { 
-	     }
+		 
                 Thread.sleep(5000);
 		Thread.sleep(3000);
 		//Apply coupon
