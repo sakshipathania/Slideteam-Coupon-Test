@@ -23,8 +23,8 @@ public class Coupon_3 extends SetupClass {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	
-	@Given("^user is already on Website Home Page cc$")
-	public void user_is_already_on_Website_Home_Page_cc() throws Throwable {
+	@Given("^user is already on Website Home Page cciii$")
+	public void user_is_already_on_Website_Home_Page_cciii() throws Throwable {
 		driver.get(AppURL);
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
@@ -125,8 +125,8 @@ public class Coupon_3 extends SetupClass {
 	}
 	
     
-    @Then("^user is redirected to pricing page and choose the plan to pay cc$")
-	public void user_is_redirected_to_pricing_page_and_choose_the_plan_to_pay_cc() throws Throwable {
+    @Then("^user is redirected to pricing page and choose the plan to pay cciii$")
+	public void user_is_redirected_to_pricing_page_and_choose_the_plan_to_pay_cciii() throws Throwable {
 		// choose a plan
 		Thread.sleep(4000);
 		driver.get("https://www.slideteam.net/pricing");
@@ -142,8 +142,8 @@ public class Coupon_3 extends SetupClass {
 
 	}
 
-	@Then("^user is redirected checkout page cc$")
-	public void user_is_redirected_checkout_page_cc() throws Throwable {
+	@Then("^user is redirected checkout page cciii$")
+	public void user_is_redirected_checkout_page_cciii() throws Throwable {
 		Thread.sleep(6000);
     //WebElement Continue =  driver.findElement(By.xpath("//*[@id='pg-checkout-shipping-info']/div[1]/div/div/div/div[2]/button"));
 	//js.executeScript("arguments[0].scrollIntoView();",Continue);
@@ -151,8 +151,8 @@ public class Coupon_3 extends SetupClass {
 		//Continue.click();
 	}
 
-	@Then("^user proceed to pay with paypal pp cc$")
-	public void user_proceed_to_pay_with_paypal_pp_cc() throws Throwable {
+	@Then("^user proceed to pay with paypal pp cciii$")
+	public void user_proceed_to_pay_with_paypal_pp_cciii() throws Throwable {
 	
 		Thread.sleep(1400);
 		
@@ -232,8 +232,8 @@ public class Coupon_3 extends SetupClass {
 		}
 		
 	}
-	@Then("^paypal popup appears and user navigates back to my account pp cc$")
-	public void paypal_popup_appears_and_user_navigates_back_to_my_account_pp_cc() throws Throwable {
+	@Then("^paypal popup appears and user navigates back to my account pp cciii$")
+	public void paypal_popup_appears_and_user_navigates_back_to_my_account_pp_cciii() throws Throwable {
 	         
 		// page title
 		//  String pp_page_title=driver.getTitle();
@@ -247,8 +247,8 @@ public class Coupon_3 extends SetupClass {
 	}
 
 
-	@Then("^user Signout account PP cc$")
-	public void user_Signout_account_PP_cc() throws Throwable {
+	@Then("^user Signout account PP cciii$")
+	public void user_Signout_account_PP_cciii() throws Throwable {
 		Thread.sleep(3000);
 
 		
