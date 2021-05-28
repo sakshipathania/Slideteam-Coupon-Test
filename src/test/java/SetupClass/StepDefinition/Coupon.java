@@ -249,8 +249,7 @@ public class Coupon extends SetupClass {
 			System.out.println("Please verify your Card details");
 								     Thread.sleep(2000);
 								  
-		} catch (NoSuchElementException popup) {
-		}
+		
 		
 	}
 
