@@ -160,6 +160,12 @@ public class Coupon extends SetupClass {
 		
 		   Thread.sleep(1400);
 		// select 2co option
+		Thread.sleep(1400);
+		// select 2co option
+		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#amasty_stripe")));
+		Thread.sleep(2000);
+	         co_btn.click();
+		Thread.sleep(5000);
 		
 		Thread.sleep(3000);
 		//Apply coupon
