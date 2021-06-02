@@ -49,15 +49,15 @@ public class Coupon_2 extends SetupClass {
 		
 		
 		Thread.sleep(3000);
-	    driver.get("https://www.slidegeeks.com/subscriptions");
+	    driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
 		Thread.sleep(3000);
-		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
+		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Individual > div > div.slide-product > div:nth-child(1) > div.col.col2.col-bg2 > span > form > button > span")));
 		Thread.sleep(3000);
 		Join_now.click();
 		Thread.sleep(5000);
 		
-		WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(1) > div > div > div.btn-wrapper.create_accbtn > a")));
+		WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#maincontent > div.columns > div > div.login-container.container > div.block.block-new-customer > div.block-content > div > div > a > span")));
 		Thread.sleep(3000);
 		create_account.click();
 		Thread.sleep(2000);
@@ -92,7 +92,7 @@ public class Coupon_2 extends SetupClass {
 		Thread.sleep(2000);
 		
 	
-		 WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("firstname")));
+		  WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("firstname")));
 		Thread.sleep(2000);
 	    new_fname_signup.sendKeys("Selenium");
 		Thread.sleep(2000);
@@ -102,7 +102,7 @@ public class Coupon_2 extends SetupClass {
 	    new_lname_signup.sendKeys("Testing");
 		Thread.sleep(2000);
 	
-		WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password")));
+		 WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password")));
 			Thread.sleep(2000);
 		    new_pwd_signup.sendKeys("selenium@123");
 			Thread.sleep(2000);
@@ -115,6 +115,7 @@ public class Coupon_2 extends SetupClass {
 		WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("captcha_user_create")));
 		Thread.sleep(2000);
 	    new_captcha_signup.sendKeys("Aj7W2mtf9namwf55");
+		
 		
 		WebElement new_btn_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".submit")));
 		Thread.sleep(2000);
