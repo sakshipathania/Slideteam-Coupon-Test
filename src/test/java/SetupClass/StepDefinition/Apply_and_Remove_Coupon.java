@@ -15,7 +15,7 @@ import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class Coupon_2 extends SetupClass {
+public class Apply_and_Remove_Coupon extends SetupClass {
 	
 	WebDriverWait wait = new WebDriverWait(driver,50);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
