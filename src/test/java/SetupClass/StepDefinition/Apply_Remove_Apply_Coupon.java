@@ -143,7 +143,7 @@ public class Apply_Remove_Apply_Coupon extends SetupClass {
 		//	Thread.sleep(6000);
                  WebElement Join_now_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Individual > div > div.slide-product > div:nth-child(1) > div.col.col2.col-bg2 > span > form > button > span")));
 		Thread.sleep(3000);
-		js.executeScript("arguments[0].scrollIntoView();",join_now_btn);
+		js.executeScript("arguments[0].scrollIntoView();",Join_now_btn);
 		Thread.sleep(5000);
 		Join_now_btn.click();
 		Thread.sleep(5000);
