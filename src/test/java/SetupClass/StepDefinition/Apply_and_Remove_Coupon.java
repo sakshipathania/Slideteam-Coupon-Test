@@ -139,7 +139,7 @@ public class Apply_and_Remove_Coupon extends SetupClass {
 			Thread.sleep(6000);
                    Thread.sleep(1400);
 		// select 2co option
-		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#amasty_stripe")));
+		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#discount-form > div.payment-option-inner > div > div.icheckbox-box > div > ins")));
 		Thread.sleep(2000);
 	         co_btn.click();
 		Thread.sleep(5000);
